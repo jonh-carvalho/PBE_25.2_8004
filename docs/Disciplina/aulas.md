@@ -4,8 +4,10 @@
 | ---------------------------- | --------------------------------------------------------------------------- |
 | __01__ - 14/02/25    | :material-check: Apresentação da Disciplina - Processo de Desenvolvimento <br> :material-check: Processo de Desenvolvimento -[Do Cascata ao Ágil](../assets/Aulas/Do%20Cascata%20ao%20Ágil.pdf) |
 | __02__ - 21/02/25     | :material-check: [Configuração de Ambiente de Desenvolvimento](https://liveestacio-my.sharepoint.com/:w:/g/personal/00661711722_professores_ibmec_edu_br/EU2fCcJwgTFLvWNyOSUtNWABAykAdvtuiY2eOTitau10zA?e=NyuXZm) <br> :material-check: Configuração repositório  |
-| __03__ - 28/02/25     | :material-check:[Configuração de Ambiente de Desenvolvimento](https://liveestacio-my.sharepoint.com/:w:/g/personal/00661711722_professores_ibmec_edu_br/EU2fCcJwgTFLvWNyOSUtNWABAykAdvtuiY2eOTitau10zA?e=NyuXZm) |
-| __04__ - 14/04/25     | :material-check:[RUP](../assets/Aulas/RUP.pdf)   |
+| __03__ - 28/02/25     | :material-check: |
+| __04__ - 14/04/25     | :material-check: [RUP](../assets/Aulas/RUP.pdf)   |
+<!--
+
 | __05__ - 21/03/25     | :material-check: Elaboração 5w2h  <br> :material-check:[Brainstorm](../assets/Aulas/O%20processo%20de brainstorm.pdf) e [Mapa Mental](../assets/Aulas/Mapa%20Mental.pdf)|
 | __06__ - 28/03/24     | :material-check: [Engenharia de Requisitos](..//assets/Aulas/Engenharia%20de%20Requisitos_Cap05.pdf)  <br> - [Análise OO e UML](../assets/Aulas/AnaliseOO&UML.pdf) <br> - Diagrama de Casos de Uso <br> - [Classes](../assets/Aulas/Classes_Pacotes.pdf) |
 | __07__ - 04/04/25     | :material-check: AP1    |
