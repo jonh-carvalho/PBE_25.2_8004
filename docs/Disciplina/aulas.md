@@ -5,7 +5,7 @@
 | __01__ - 07/08/25    | :material-check: Apresentação da Disciplina - Processo de Desenvolvimento <br> :material-check: Processo de Desenvolvimento -[Do Cascata ao Ágil](../assets/Aulas/Do%20Cascata%20ao%20Ágil.pdf) |
 | __02__ - 14/08/25     | :material-check: [Configuração de Ambiente de Desenvolvimento](https://liveestacio-my.sharepoint.com/:w:/g/personal/00661711722_professores_ibmec_edu_br/EU2fCcJwgTFLvWNyOSUtNWABnf7xw5XPoNRumYUMMtNMwA?e=VcQKpV) <br> :material-check: Configuração repositório  |
 | __03__ - 21/08/25     | :material-check: [RUP](../assets/Aulas/RUP.pdf)|
-| __04__ - 28/08/25     | :material-check: [Design Thinking](http://127.0.0.1:8000/Disciplina/Roteiros/Inicia%C3%A7%C3%A3o/04_DesignThinking/) |
+| __04__ - 28/08/25     | :material-check: [Design Thinking](https://jonh-carvalho.github.io/PBE_25.2_8004/Disciplina/Roteiros/Inicia%C3%A7%C3%A3o/04_DesignThinking/) |
 | __05__ - 04/09/25     | :material-check:  Elaboração 5w2h  <br> :material-check: [Brainstorm](../assets/Aulas/O%20processo%20de brainstorm.pdf) <br> :material-check: [Mapa Mental](../assets/Aulas/Mapa%20Mental.pdf)|
 <!--
 
