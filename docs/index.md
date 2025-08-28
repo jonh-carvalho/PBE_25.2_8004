@@ -13,7 +13,7 @@ hide:
 
     ---
 
-    Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua
+    João Arthur, Arthur Maurity, Guilherme, Patrick
 
     [:octicons-arrow-right-24: Repositório](https://github.com/Projetos-de-Extensao/PBE_25.2_8004_I)
 
@@ -21,7 +21,7 @@ hide:
 
     ---
 
-    Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua
+    Arthur Riess, Pedro Macedo, Yago Carvalho, Felipe Maia
 
     [:octicons-arrow-right-24: Repositório](https://github.com/Projetos-de-Extensao/PBE_25.2_8004_II)
 
@@ -30,9 +30,18 @@ hide:
 
     ---
 
-    Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua
+    João Victor, João Pedro, João Victor, Caique, Sarah Ferrari
 
     [:octicons-arrow-right-24: Repositório](https://github.com/Projetos-de-Extensao/PBE_25.2_8004_III)
+
+    -   :material-github:{ .lg .middle } __PBE_25.2_8004_IV__
+
+    ---
+
+    Victor Coutinho, Arthur Azeredo, Antonio Lima, Ricardo França
+
+    [:octicons-arrow-right-24: Repositório](https://github.com/Projetos-de-Extensao/PBE_25.2_8004_IV
+    )
 
 </div>
 
