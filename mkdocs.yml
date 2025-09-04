@@ -13,6 +13,7 @@ nav:
       - Mkdocs: Disciplina/mkdocs.md
       - CodeSpace: Disciplina/codespace.md
       - Avaliações: Disciplina/avalia.md
+      - Issues e Projects: Disciplina/issues_projects.md
   - Iniciação: 
       - Index: Iniciacao/index.md
       - Pesquisa: Iniciacao/pesquisa.md
