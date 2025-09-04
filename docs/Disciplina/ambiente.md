@@ -1,16 +1,18 @@
-# Ambiente de Desenvolvimento
+# **Ambiente de Desenvolvimento**
 
-## Python
+# **Instalação softwares**
 
-No Microsoft Store, instale o **Python 3.13** ou acesse o site [python.org](https://www.python.org/).
+## **Python**
 
-![Instalação do Python via Microsoft Store](images/python_store.png)
+No Microsoft Store, instale o **Python mais atualizado** ou faça o download do site [python.org](https://www.python.org/downloads).
+
+![Instalação do Python via Microsoft Store](../assets/ambiente/python.png)
 
 ## Visual Studio Code
 
-No Microsoft Store, instale ou baixe o **Visual Studio Code**.
+No Microsoft Store, instale ou baixe o **Visual Studio Code** mais atualizado.
 
-![Instalação do Visual Studio Code via Microsoft Store](images/vscode_store.png)
+![Instalação do Visual Studio Code via Microsoft Store](../assets/ambiente/vscode.png)
 
 ## Baixar e instalar o Git
 
@@ -18,7 +20,7 @@ Faça o download da versão mais recente do Git para Windows:
 
 [Git-2.46.0-64-bit.exe](https://github.com/git-for-windows/git/releases/download/v2.46.0.windows.1/Git-2.46.0-64-bit.exe)
 
-![Download do Git](images/git_download.png)
+![Download do Git](../assets/ambiente/git.png)
 
 ### Caso precise adicionar o Git ao Path do Windows
 
@@ -27,6 +29,11 @@ No Prompt de Comando, digite:
 rundll32 sysdm.cpl,EditEnvironmentVariables
 ```
 Adicione o caminho de instalação do Git na variável `PATH`.
+
+**Exemplo:**
+```bash
+C:\Program Files\Git\cmd
+```
 
 ---
 
@@ -46,7 +53,7 @@ git config --global user.email "youremail@yourdomain.com"
 
 Abra o Visual Studio Code e instale a extensão oficial do Python.
 
-![Extensão Python no VSCode](images/python_extension.png)
+![Extensão Python no VSCode](..//assets/ambiente/extpython.png)
 
 ---
 
@@ -57,13 +64,17 @@ Agora vamos instalar o ambiente virtual, que permite isolar pastas (projetos) co
 1. Aperte `Ctrl + Shift + P` e selecione **Python: Create Environment...**.
 2. Após a instalação, aparecerá a pasta `.venv`.
 
-![Criação de Ambiente Virtual](images/venv_creation.png)
+![Criação de Ambiente Virtual](../assets/ambiente/venv.png)
 
----
+[Pasta Venv](../assets/ambiente/pastavenv.png)
+
+
 
 ## Site de Documentação
 
 Abra um Terminal para prosseguirmos com a instalação do **MkDocs**, uma ferramenta que cria sites de documentação a partir de arquivos `.md` (Markdown).
+
+[Terminal](../assets/ambiente/terminal.png)
 
 ### Instalação do MkDocs
 ```bash
