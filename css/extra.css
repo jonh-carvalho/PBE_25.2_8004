@@ -2,3 +2,7 @@
     color:red;
     font-weight:bold;
 }
+
+table, td {
+    font-size: 1.2em;
+}
