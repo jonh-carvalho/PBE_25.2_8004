@@ -36,3 +36,28 @@
 | __21__ - 18/10/24     | :material-check: Introdução SQL - Sqlite OO  |
 | __22__ - 19/10/24     | :material-check: [Funcionalidade](../assets/Aulas/Iquirium.pdf)        
 -->
+
+```plantuml
+@startuml teste
+class Usuario {
+}
+
+class Livro {
+}
+
+class Biblioteca {
+}
+
+class Assinatura {
+
+}
+
+Usuario --  Assinatura 
+Usuario  --  Livro 
+Biblioteca  --  Livro
+Biblioteca  --  Usuario 
+
+Livro  --  Usuario 
+
+@enduml
+```

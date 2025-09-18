@@ -23,9 +23,9 @@ nav:
               - Design Thinking: Disciplina/Roteiros/Iniciação/04_DesignThinking.md
               - UP: Disciplina/Roteiros/Iniciação/04_UPgithub.md
           - Elaboração:
-              - Requisitos: Elaboracao/req_biblioteca.md
-              - Casos de Uso: Elaboracao/uc_biblioteca.md
-              - Diagrama de Classes: Elaboracao/class_biblioteca.md      
+              - Requisitos: Disciplina/Roteiros/Elaboração/req_biblioteca.md
+              - Casos de Uso: Disciplina/Roteiros/Elaboração/uc_biblioteca.md
+              - Diagrama de Classes: Disciplina/Roteiros/Elaboração/class_biblioteca.md      
   - Iniciação: 
       - Index: Iniciacao/index.md
       - Pesquisa: Iniciacao/pesquisa.md
@@ -109,8 +109,10 @@ markdown_extensions:
       permalink: true
 
 plugins:
-  - minify:
-      minify_html: true
+  - plantuml:
+      puml_url: https://www.plantuml.com/plantuml/
+      puml_keyword: plantuml
+  
   - search
 
 theme:
