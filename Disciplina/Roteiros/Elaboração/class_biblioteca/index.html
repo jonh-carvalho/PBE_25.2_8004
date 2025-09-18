@@ -1,98 +1,2109 @@
-<!doctype html><html lang=pt class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Jonh Carvalho"><link href=../uc_biblioteca/ rel=prev><link href=../../../../Iniciacao/ rel=next><link rel=icon href=../../../../images/favicon.png><meta name=generator content="mkdocs-1.6.1, mkdocs-material-9.6.4"><title>Diagrama de Classes - PBE_25.2_8004</title><link rel=stylesheet href=../../../../assets/stylesheets/main.8608ea7d.min.css><link rel=stylesheet href=../../../../assets/stylesheets/palette.06af60db.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style><link rel=stylesheet href=../../../../css/extra.css><script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script></head> <body dir=ltr data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=indigo> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#documento-de-classes-e-diagrama-de-classe-conceitual class=md-skip> Pular para conteúdo </a> </div> <div data-md-component=announce> </div> <header class=md-header data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Cabeçalho> <a href=../../../.. title=PBE_25.2_8004 class="md-header__button md-logo" aria-label=PBE_25.2_8004 data-md-component=logo> <img src=../../../../assets/ibmec_logo.png alt=logo> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> PBE_25.2_8004 </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> Diagrama de Classes </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media=(prefers-color-scheme) data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=indigo aria-label="Switch to light mode" type=radio name=__palette id=__palette_0> <label class="md-header__button md-icon" title="Switch to light mode" for=__palette_1 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg> </label> <input class=md-option data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=black aria-label="Switch to dark mode" type=radio name=__palette id=__palette_1> <label class="md-header__button md-icon" title="Switch to dark mode" for=__palette_2 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg> </label> <input class=md-option data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme=slate data-md-color-primary=deep-orange data-md-color-accent=amber aria-label="Switch to system preference" type=radio name=__palette id=__palette_2> <label class="md-header__button md-icon" title="Switch to system preference" for=__palette_0 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg> </label> </form> <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Buscar placeholder=Buscar autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg> </label> <nav class=md-search__options aria-label=Pesquisar> <a href=javascript:void(0) class="md-search__icon md-icon" title=Compartilhar aria-label=Compartilhar data-clipboard data-clipboard-text data-md-component=search-share tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg> </a> <button type=reset class="md-search__icon md-icon" title=Limpar aria-label=Limpar tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg> </button> </nav> <div class=md-search__suggest data-md-component=search-suggest></div> </form> <div class=md-search__output> <div class=md-search__scrollwrap tabindex=0 data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Inicializando busca </div> <ol class=md-search-result__list role=presentation></ol> </div> </div> </div> </div> </div> <div class=md-header__source> <a href=https://github.com/jonh-carvalho/PBE_25.2_8004 title="Ir para repositório" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg> </div> <div class=md-source__repository> GitHub </div> </a> </div> </nav> </header> <div class=md-container data-md-component=container> <nav class=md-tabs aria-label=Abas data-md-component=tabs> <div class=md-grid> <ul class=md-tabs__list> <li class=md-tabs__item> <a href=../../../.. class=md-tabs__link> Home </a> </li> <li class="md-tabs__item md-tabs__item--active"> <a href=../../../aulas/ class=md-tabs__link> Disciplina </a> </li> <li class=md-tabs__item> <a href=../../../../Iniciacao/ class=md-tabs__link> Iniciação </a> </li> <li class=md-tabs__item> <a href=../../../../Elaboracao/ class=md-tabs__link> Elaboração </a> </li> <li class=md-tabs__item> <a href=../../../../Construcao/ class=md-tabs__link> Construção </a> </li> <li class=md-tabs__item> <a href=../../../../Transicao/ class=md-tabs__link> Transição </a> </li> <li class=md-tabs__item> <a href=../../../bibliografia/ class=md-tabs__link> Bibliografia </a> </li> </ul> </div> </nav> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label=Navegação data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../../../.. title=PBE_25.2_8004 class="md-nav__button md-logo" aria-label=PBE_25.2_8004 data-md-component=logo> <img src=../../../../assets/ibmec_logo.png alt=logo> </a> PBE_25.2_8004 </label> <div class=md-nav__source> <a href=https://github.com/jonh-carvalho/PBE_25.2_8004 title="Ir para repositório" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg> </div> <div class=md-source__repository> GitHub </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../.. class=md-nav__link> <span class=md-ellipsis> Home </span> </a> </li> <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2 checked> <label class=md-nav__link for=__nav_2 id=__nav_2_label tabindex> <span class=md-ellipsis> Disciplina </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_2_label aria-expanded=true> <label class=md-nav__title for=__nav_2> <span class="md-nav__icon md-icon"></span> Disciplina </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../aulas/ class=md-nav__link> <span class=md-ellipsis> Aulas </span> </a> </li> <li class=md-nav__item> <a href=../../../ambiente/ class=md-nav__link> <span class=md-ellipsis> Ambiente </span> </a> </li> <li class=md-nav__item> <a href=../../../github/ class=md-nav__link> <span class=md-ellipsis> Github </span> </a> </li> <li class=md-nav__item> <a href=../../../mkdocs/ class=md-nav__link> <span class=md-ellipsis> Mkdocs </span> </a> </li> <li class=md-nav__item> <a href=../../../codespace/ class=md-nav__link> <span class=md-ellipsis> CodeSpace </span> </a> </li> <li class=md-nav__item> <a href=../../../avalia/ class=md-nav__link> <span class=md-ellipsis> Avaliações </span> </a> </li> <li class=md-nav__item> <a href=../../../issues_projects/ class=md-nav__link> <span class=md-ellipsis> Issues e Projects </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_8> <label class=md-nav__link for=__nav_2_8 id=__nav_2_8_label tabindex=0> <span class=md-ellipsis> Dojo </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_2_8_label aria-expanded=false> <label class=md-nav__title for=__nav_2_8> <span class="md-nav__icon md-icon"></span> Dojo </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../dojo/dojo.md class=md-nav__link> <span class=md-ellipsis> Index </span> </a> </li> <li class=md-nav__item> <a href=../../../dojo/setup.md class=md-nav__link> <span class=md-ellipsis> Setup </span> </a> </li> <li class=md-nav__item> <a href=../../../dojo/tddpairprogramming.md class=md-nav__link> <span class=md-ellipsis> TDD/Pair </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_9 checked> <label class=md-nav__link for=__nav_2_9 id=__nav_2_9_label tabindex=0> <span class=md-ellipsis> Roteiros </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_2_9_label aria-expanded=true> <label class=md-nav__title for=__nav_2_9> <span class="md-nav__icon md-icon"></span> Roteiros </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_9_1> <label class=md-nav__link for=__nav_2_9_1 id=__nav_2_9_1_label tabindex=0> <span class=md-ellipsis> Iniciação </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_2_9_1_label aria-expanded=false> <label class=md-nav__title for=__nav_2_9_1> <span class="md-nav__icon md-icon"></span> Iniciação </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../Inicia%C3%A7%C3%A3o/04_DesignThinking/ class=md-nav__link> <span class=md-ellipsis> Design Thinking </span> </a> </li> <li class=md-nav__item> <a href=../../Inicia%C3%A7%C3%A3o/04_UPgithub/ class=md-nav__link> <span class=md-ellipsis> UP </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2_9_2 checked> <label class=md-nav__link for=__nav_2_9_2 id=__nav_2_9_2_label tabindex=0> <span class=md-ellipsis> Elaboração </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_2_9_2_label aria-expanded=true> <label class=md-nav__title for=__nav_2_9_2> <span class="md-nav__icon md-icon"></span> Elaboração </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../req_biblioteca/ class=md-nav__link> <span class=md-ellipsis> Requisitos </span> </a> </li> <li class=md-nav__item> <a href=../uc_biblioteca/ class=md-nav__link> <span class=md-ellipsis> Casos de Uso </span> </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> <span class=md-ellipsis> Diagrama de Classes </span> <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> <span class=md-ellipsis> Diagrama de Classes </span> </a> <nav class="md-nav md-nav--secondary" aria-label=Índice> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Índice </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#problema-de-modelagem class=md-nav__link> <span class=md-ellipsis> Problema de Modelagem </span> </a> </li> <li class=md-nav__item> <a href=#1-introducao class=md-nav__link> <span class=md-ellipsis> 1. Introdução </span> </a> </li> <li class=md-nav__item> <a href=#2-descricao-das-classes class=md-nav__link> <span class=md-ellipsis> 2. Descrição das Classes </span> </a> <nav class=md-nav aria-label="2. Descrição das Classes"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#usuario class=md-nav__link> <span class=md-ellipsis> Usuário </span> </a> </li> <li class=md-nav__item> <a href=#livro class=md-nav__link> <span class=md-ellipsis> Livro </span> </a> </li> <li class=md-nav__item> <a href=#reserva class=md-nav__link> <span class=md-ellipsis> Reserva </span> </a> </li> <li class=md-nav__item> <a href=#assinatura class=md-nav__link> <span class=md-ellipsis> Assinatura </span> </a> </li> <li class=md-nav__item> <a href=#notificacao class=md-nav__link> <span class=md-ellipsis> Notificacao </span> </a> </li> <li class=md-nav__item> <a href=#pagamento class=md-nav__link> <span class=md-ellipsis> Pagamento </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#3-relacionamentos class=md-nav__link> <span class=md-ellipsis> 3. Relacionamentos </span> </a> </li> <li class=md-nav__item> <a href=#4-diagrama-de-classe-conceitual-uml class=md-nav__link> <span class=md-ellipsis> 4. Diagrama de Classe Conceitual (UML) </span> </a> </li> <li class=md-nav__item> <a href=#5-observacoes class=md-nav__link> <span class=md-ellipsis> 5. Observações </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_3> <div class="md-nav__link md-nav__container"> <a href=../../../../Iniciacao/ class="md-nav__link "> <span class=md-ellipsis> Iniciação </span> </a> <label class="md-nav__link " for=__nav_3 id=__nav_3_label tabindex=0> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_3_label aria-expanded=false> <label class=md-nav__title for=__nav_3> <span class="md-nav__icon md-icon"></span> Iniciação </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../../Iniciacao/pesquisa/ class=md-nav__link> <span class=md-ellipsis> Pesquisa </span> </a> </li> <li class=md-nav__item> <a href=../../../../Iniciacao/cenario/ class=md-nav__link> <span class=md-ellipsis> Cenário </span> </a> </li> <li class=md-nav__item> <a href=../../../../Iniciacao/5w2h/ class=md-nav__link> <span class=md-ellipsis> 5w2h </span> </a> </li> <li class=md-nav__item> <a href=../../../../Iniciacao/brainstorm.md class=md-nav__link> <span class=md-ellipsis> Brainstorming </span> </a> </li> <li class=md-nav__item> <a href=../../../../Iniciacao/mapa_mental/ class=md-nav__link> <span class=md-ellipsis> Mapa Mental </span> </a> </li> <li class=md-nav__item> <a href=../../../../Iniciacao/design_thinking.md class=md-nav__link> <span class=md-ellipsis> Design Thinking </span> </a> </li> <li class=md-nav__item> <a href=../../../../Iniciacao/prototipobaixa_fidelidade.md class=md-nav__link> <span class=md-ellipsis> Prototipagem Baixa Fidelidade </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_4> <div class="md-nav__link md-nav__container"> <a href=../../../../Elaboracao/ class="md-nav__link "> <span class=md-ellipsis> Elaboração </span> </a> <label class="md-nav__link " for=__nav_4 id=__nav_4_label tabindex=0> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_4_label aria-expanded=false> <label class=md-nav__title for=__nav_4> <span class="md-nav__icon md-icon"></span> Elaboração </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../../Elaboracao/espreq/ class=md-nav__link> <span class=md-ellipsis> Requisitos </span> </a> </li> <li class=md-nav__item> <a href=../../../../Elaboracao/diagrama_casos_de_uso/ class=md-nav__link> <span class=md-ellipsis> Casos de Uso </span> </a> </li> <li class=md-nav__item> <a href=../../../../Elaboracao/diagrama_de_classes/ class=md-nav__link> <span class=md-ellipsis> Diagrama de Classes </span> </a> </li> <li class=md-nav__item> <a href=../../../../Elaboracao/diagrama_de_sequencia/ class=md-nav__link> <span class=md-ellipsis> Diagrama de Sequência </span> </a> </li> <li class=md-nav__item> <a href=../../../../Elaboracao/prototipo_baixa_fidelidade/ class=md-nav__link> <span class=md-ellipsis> Protótipo de Baixa Fidelidade </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_5> <div class="md-nav__link md-nav__container"> <a href=../../../../Construcao/ class="md-nav__link "> <span class=md-ellipsis> Construção </span> </a> <label class="md-nav__link " for=__nav_5 id=__nav_5_label tabindex=0> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_5_label aria-expanded=false> <label class=md-nav__title for=__nav_5> <span class="md-nav__icon md-icon"></span> Construção </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../../Construcao/git_issues.md class=md-nav__link> <span class=md-ellipsis> Git Issues </span> </a> </li> <li class=md-nav__item> <a href=../../../../Construcao/github_projects.md class=md-nav__link> <span class=md-ellipsis> GitHub Projects </span> </a> </li> <li class=md-nav__item> <a href=../../../../Construcao/codespace.md class=md-nav__link> <span class=md-ellipsis> CodeSpace </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_6> <div class="md-nav__link md-nav__container"> <a href=../../../../Transicao/ class="md-nav__link "> <span class=md-ellipsis> Transição </span> </a> </div> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_6_label aria-expanded=false> <label class=md-nav__title for=__nav_6> <span class="md-nav__icon md-icon"></span> Transição </label> <ul class=md-nav__list data-md-scrollfix> </ul> </nav> </li> <li class=md-nav__item> <a href=../../../bibliografia/ class=md-nav__link> <span class=md-ellipsis> Bibliografia </span> </a> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <h1 id=documento-de-classes-e-diagrama-de-classe-conceitual>Documento de Classes e Diagrama de Classe Conceitual<a class=headerlink href=#documento-de-classes-e-diagrama-de-classe-conceitual title="Permanent link">&para;</a></h1> <h2 id=problema-de-modelagem>Problema de Modelagem<a class=headerlink href=#problema-de-modelagem title="Permanent link">&para;</a></h2> <p>Você foi contratado para desenvolver um sistema para gerenciar uma <strong>biblioteca de livros digitais</strong>. O sistema permitirá que os usuários façam login, procurem livros, reservem livros, e baixem cópias para leitura offline. A biblioteca também oferece assinatura premium, onde os usuários podem acessar livros exclusivos e ganhar vantagens especiais, como reservas antecipadas e downloads ilimitados.</p> <h2 id=1-introducao>1. Introdução<a class=headerlink href=#1-introducao title="Permanent link">&para;</a></h2> <p>Este documento apresenta a modelagem conceitual das principais classes do sistema de gerenciamento de biblioteca de livros digitais, conforme os requisitos especificados. O objetivo é fornecer uma visão clara das entidades, seus atributos e relacionamentos, servindo de base para o desenvolvimento posterior.</p> <h2 id=2-descricao-das-classes>2. Descrição das Classes<a class=headerlink href=#2-descricao-das-classes title="Permanent link">&para;</a></h2> <h3 id=usuario>Usuário<a class=headerlink href=#usuario title="Permanent link">&para;</a></h3> <ul> <li><strong>Atributos:</strong><ul> <li><code>id</code>: int</li> <li><code>nome</code>: string</li> <li><code>email</code>: string</li> <li><code>senha</code>: string (criptografada)</li> <li><code>tipo_assinatura</code>: enum (BÁSICO, PREMIUM)</li> </ul> </li> <li><strong>Métodos:</strong><ul> <li><code>autenticar()</code></li> <li><code>reservarLivro()</code></li> <li><code>baixarLivro()</code></li> <li><code>assinarPremium()</code></li> <li><code>receberNotificacao()</code></li> </ul> </li> </ul> <hr> <h3 id=livro>Livro<a class=headerlink href=#livro title="Permanent link">&para;</a></h3> <ul> <li><strong>Atributos:</strong><ul> <li><code>id</code>: int</li> <li><code>titulo</code>: string</li> <li><code>autor</code>: string</li> <li><code>categoria</code>: string</li> <li><code>formato</code>: enum (PDF, EPUB)</li> <li><code>exclusivo</code>: bool</li> <li><code>disponivel</code>: bool</li> </ul> </li> <li><strong>Métodos:</strong><ul> <li><code>estaDisponivel()</code></li> <li><code>reservar()</code></li> <li><code>baixar()</code></li> </ul> </li> </ul> <hr> <h3 id=reserva>Reserva<a class=headerlink href=#reserva title="Permanent link">&para;</a></h3> <ul> <li><strong>Atributos:</strong><ul> <li><code>id</code>: int</li> <li><code>usuario</code>: Usuário</li> <li><code>livro</code>: Livro</li> <li><code>data_reserva</code>: datetime</li> <li><code>data_expiracao</code>: datetime</li> <li><code>status</code>: enum (ATIVA, EXPIRADA, CONCLUÍDA)</li> </ul> </li> <li><strong>Métodos:</strong><ul> <li><code>verificarExpiracao()</code></li> <li><code>concluirReserva()</code></li> </ul> </li> </ul> <hr> <h3 id=assinatura>Assinatura<a class=headerlink href=#assinatura title="Permanent link">&para;</a></h3> <ul> <li><strong>Atributos:</strong><ul> <li><code>id</code>: int</li> <li><code>usuario</code>: Usuário</li> <li><code>data_inicio</code>: datetime</li> <li><code>data_fim</code>: datetime</li> <li><code>status</code>: enum (ATIVA, EXPIRADA)</li> </ul> </li> <li><strong>Métodos:</strong><ul> <li><code>renovar()</code></li> <li><code>cancelar()</code></li> </ul> </li> </ul> <hr> <h3 id=notificacao>Notificacao<a class=headerlink href=#notificacao title="Permanent link">&para;</a></h3> <ul> <li><strong>Atributos:</strong><ul> <li><code>id</code>: int</li> <li><code>usuario</code>: Usuário</li> <li><code>mensagem</code>: string</li> <li><code>data_envio</code>: datetime</li> <li><code>lida</code>: bool</li> </ul> </li> <li><strong>Métodos:</strong><ul> <li><code>marcarComoLida()</code></li> </ul> </li> </ul> <hr> <h3 id=pagamento>Pagamento<a class=headerlink href=#pagamento title="Permanent link">&para;</a></h3> <ul> <li><strong>Atributos:</strong><ul> <li><code>id</code>: int</li> <li><code>usuario</code>: Usuário</li> <li><code>valor</code>: float</li> <li><code>data_pagamento</code>: datetime</li> <li><code>status</code>: enum (PENDENTE, APROVADO, RECUSADO)</li> </ul> </li> <li><strong>Métodos:</strong><ul> <li><code>processarPagamento()</code></li> </ul> </li> </ul> <h2 id=3-relacionamentos>3. Relacionamentos<a class=headerlink href=#3-relacionamentos title="Permanent link">&para;</a></h2> <ul> <li>Um <strong>Usuário</strong> pode ter várias <strong>Reservas</strong> e várias <strong>Assinaturas</strong>.</li> <li>Um <strong>Livro</strong> pode estar associado a várias <strong>Reservas</strong>.</li> <li>Uma <strong>Reserva</strong> está associada a um único <strong>Usuário</strong> e um único <strong>Livro</strong>.</li> <li>Um <strong>Usuário</strong> pode receber várias <strong>Notificações</strong>.</li> <li>Um <strong>Usuário</strong> pode realizar vários <strong>Pagamentos</strong>.</li> </ul> <h2 id=4-diagrama-de-classe-conceitual-uml>4. Diagrama de Classe Conceitual (UML)<a class=headerlink href=#4-diagrama-de-classe-conceitual-uml title="Permanent link">&para;</a></h2> <p>+----------------+ +----------------+ +----------------+ | Usuário |&lt;&gt;-----o| Reserva |o-----&lt;&gt;| Livro | +----------------+ +----------------+ +----------------+ | id | | id | | id | | nome | | data_reserva | | titulo | | email | | data_expiracao | | autor | | senha | | status | | categoria | | tipo_assinatura| +----------------+ | formato | +----------------+ | exclusivo | | autenticar() | | disponivel | | reservarLivro()| +----------------+ | baixarLivro() | | estaDisponivel()| | assinarPremium()| | reservar() | | receberNotif() | | baixar() | +----------------+ +----------------+ | 1 1| * | | | * | +----------------+ | | Assinatura | | +----------------+ | | id | | | data_inicio | | | data_fim | | | status | | +----------------+ | | renovar() | | | cancelar() | | +----------------+ | | 1 | | * | +----------------+ | | Notificacao | | +----------------+ | | id | | | mensagem | | | data_envio | | | lida | | +----------------+ | | marcarComoLida()| | +----------------+ | | 1 | | * | +----------------+ | | Pagamento | | +----------------+ | | id | | | valor | | | data_pagamento | | | status | | +----------------+ | | processarPag() | | +----------------+ |</p> <h2 id=5-observacoes>5. Observações<a class=headerlink href=#5-observacoes title="Permanent link">&para;</a></h2> <ul> <li>O diagrama acima é conceitual e pode ser refinado na modelagem lógica/física.</li> <li>As regras de negócio, como limites de reserva e acesso a livros exclusivos, são implementadas nos métodos das classes e validadas conforme o tipo de assinatura do usuário.</li> <li>A integração com o sistema de pagamento ocorre via classe <strong>Pagamento</strong>.</li> </ul> <div class="language-text highlight"><pre><span></span><code><span id=__span-0-1><a id=__codelineno-0-1 name=__codelineno-0-1 href=#__codelineno-0-1></a>@startuml
-</span><span id=__span-0-2><a id=__codelineno-0-2 name=__codelineno-0-2 href=#__codelineno-0-2></a>class Usuario {
-</span><span id=__span-0-3><a id=__codelineno-0-3 name=__codelineno-0-3 href=#__codelineno-0-3></a>  +id: int
-</span><span id=__span-0-4><a id=__codelineno-0-4 name=__codelineno-0-4 href=#__codelineno-0-4></a>  +nome: string
-</span><span id=__span-0-5><a id=__codelineno-0-5 name=__codelineno-0-5 href=#__codelineno-0-5></a>  +email: string
-</span><span id=__span-0-6><a id=__codelineno-0-6 name=__codelineno-0-6 href=#__codelineno-0-6></a>  +senha: string
-</span><span id=__span-0-7><a id=__codelineno-0-7 name=__codelineno-0-7 href=#__codelineno-0-7></a>  +tipo_assinatura: TipoAssinatura
-</span><span id=__span-0-8><a id=__codelineno-0-8 name=__codelineno-0-8 href=#__codelineno-0-8></a>  +autenticar()
-</span><span id=__span-0-9><a id=__codelineno-0-9 name=__codelineno-0-9 href=#__codelineno-0-9></a>  +reservarLivro()
-</span><span id=__span-0-10><a id=__codelineno-0-10 name=__codelineno-0-10 href=#__codelineno-0-10></a>  +baixarLivro()
-</span><span id=__span-0-11><a id=__codelineno-0-11 name=__codelineno-0-11 href=#__codelineno-0-11></a>  +assinarPremium()
-</span><span id=__span-0-12><a id=__codelineno-0-12 name=__codelineno-0-12 href=#__codelineno-0-12></a>  +receberNotificacao()
-</span><span id=__span-0-13><a id=__codelineno-0-13 name=__codelineno-0-13 href=#__codelineno-0-13></a>}
-</span><span id=__span-0-14><a id=__codelineno-0-14 name=__codelineno-0-14 href=#__codelineno-0-14></a>
-</span><span id=__span-0-15><a id=__codelineno-0-15 name=__codelineno-0-15 href=#__codelineno-0-15></a>class Livro {
-</span><span id=__span-0-16><a id=__codelineno-0-16 name=__codelineno-0-16 href=#__codelineno-0-16></a>  +id: int
-</span><span id=__span-0-17><a id=__codelineno-0-17 name=__codelineno-0-17 href=#__codelineno-0-17></a>  +titulo: string
-</span><span id=__span-0-18><a id=__codelineno-0-18 name=__codelineno-0-18 href=#__codelineno-0-18></a>  +autor: string
-</span><span id=__span-0-19><a id=__codelineno-0-19 name=__codelineno-0-19 href=#__codelineno-0-19></a>  +categoria: string
-</span><span id=__span-0-20><a id=__codelineno-0-20 name=__codelineno-0-20 href=#__codelineno-0-20></a>  +formato: FormatoLivro
-</span><span id=__span-0-21><a id=__codelineno-0-21 name=__codelineno-0-21 href=#__codelineno-0-21></a>  +exclusivo: bool
-</span><span id=__span-0-22><a id=__codelineno-0-22 name=__codelineno-0-22 href=#__codelineno-0-22></a>  +disponivel: bool
-</span><span id=__span-0-23><a id=__codelineno-0-23 name=__codelineno-0-23 href=#__codelineno-0-23></a>  +estaDisponivel()
-</span><span id=__span-0-24><a id=__codelineno-0-24 name=__codelineno-0-24 href=#__codelineno-0-24></a>  +reservar()
-</span><span id=__span-0-25><a id=__codelineno-0-25 name=__codelineno-0-25 href=#__codelineno-0-25></a>  +baixar()
-</span><span id=__span-0-26><a id=__codelineno-0-26 name=__codelineno-0-26 href=#__codelineno-0-26></a>}
-</span><span id=__span-0-27><a id=__codelineno-0-27 name=__codelineno-0-27 href=#__codelineno-0-27></a>
-</span><span id=__span-0-28><a id=__codelineno-0-28 name=__codelineno-0-28 href=#__codelineno-0-28></a>class Reserva {
-</span><span id=__span-0-29><a id=__codelineno-0-29 name=__codelineno-0-29 href=#__codelineno-0-29></a>  +id: int
-</span><span id=__span-0-30><a id=__codelineno-0-30 name=__codelineno-0-30 href=#__codelineno-0-30></a>  +data_reserva: datetime
-</span><span id=__span-0-31><a id=__codelineno-0-31 name=__codelineno-0-31 href=#__codelineno-0-31></a>  +data_expiracao: datetime
-</span><span id=__span-0-32><a id=__codelineno-0-32 name=__codelineno-0-32 href=#__codelineno-0-32></a>  +status: StatusReserva
-</span><span id=__span-0-33><a id=__codelineno-0-33 name=__codelineno-0-33 href=#__codelineno-0-33></a>  +verificarExpiracao()
-</span><span id=__span-0-34><a id=__codelineno-0-34 name=__codelineno-0-34 href=#__codelineno-0-34></a>  +concluirReserva()
-</span><span id=__span-0-35><a id=__codelineno-0-35 name=__codelineno-0-35 href=#__codelineno-0-35></a>}
-</span><span id=__span-0-36><a id=__codelineno-0-36 name=__codelineno-0-36 href=#__codelineno-0-36></a>
-</span><span id=__span-0-37><a id=__codelineno-0-37 name=__codelineno-0-37 href=#__codelineno-0-37></a>class Assinatura {
-</span><span id=__span-0-38><a id=__codelineno-0-38 name=__codelineno-0-38 href=#__codelineno-0-38></a>  +id: int
-</span><span id=__span-0-39><a id=__codelineno-0-39 name=__codelineno-0-39 href=#__codelineno-0-39></a>  +data_inicio: datetime
-</span><span id=__span-0-40><a id=__codelineno-0-40 name=__codelineno-0-40 href=#__codelineno-0-40></a>  +data_fim: datetime
-</span><span id=__span-0-41><a id=__codelineno-0-41 name=__codelineno-0-41 href=#__codelineno-0-41></a>  +status: StatusAssinatura
-</span><span id=__span-0-42><a id=__codelineno-0-42 name=__codelineno-0-42 href=#__codelineno-0-42></a>  +renovar()
-</span><span id=__span-0-43><a id=__codelineno-0-43 name=__codelineno-0-43 href=#__codelineno-0-43></a>  +cancelar()
-</span><span id=__span-0-44><a id=__codelineno-0-44 name=__codelineno-0-44 href=#__codelineno-0-44></a>}
-</span><span id=__span-0-45><a id=__codelineno-0-45 name=__codelineno-0-45 href=#__codelineno-0-45></a>
-</span><span id=__span-0-46><a id=__codelineno-0-46 name=__codelineno-0-46 href=#__codelineno-0-46></a>class Notificacao {
-</span><span id=__span-0-47><a id=__codelineno-0-47 name=__codelineno-0-47 href=#__codelineno-0-47></a>  +id: int
-</span><span id=__span-0-48><a id=__codelineno-0-48 name=__codelineno-0-48 href=#__codelineno-0-48></a>  +mensagem: string
-</span><span id=__span-0-49><a id=__codelineno-0-49 name=__codelineno-0-49 href=#__codelineno-0-49></a>  +data_envio: datetime
-</span><span id=__span-0-50><a id=__codelineno-0-50 name=__codelineno-0-50 href=#__codelineno-0-50></a>  +lida: bool
-</span><span id=__span-0-51><a id=__codelineno-0-51 name=__codelineno-0-51 href=#__codelineno-0-51></a>  +marcarComoLida()
-</span><span id=__span-0-52><a id=__codelineno-0-52 name=__codelineno-0-52 href=#__codelineno-0-52></a>}
-</span><span id=__span-0-53><a id=__codelineno-0-53 name=__codelineno-0-53 href=#__codelineno-0-53></a>
-</span><span id=__span-0-54><a id=__codelineno-0-54 name=__codelineno-0-54 href=#__codelineno-0-54></a>class Pagamento {
-</span><span id=__span-0-55><a id=__codelineno-0-55 name=__codelineno-0-55 href=#__codelineno-0-55></a>  +id: int
-</span><span id=__span-0-56><a id=__codelineno-0-56 name=__codelineno-0-56 href=#__codelineno-0-56></a>  +valor: float
-</span><span id=__span-0-57><a id=__codelineno-0-57 name=__codelineno-0-57 href=#__codelineno-0-57></a>  +data_pagamento: datetime
-</span><span id=__span-0-58><a id=__codelineno-0-58 name=__codelineno-0-58 href=#__codelineno-0-58></a>  +status: StatusPagamento
-</span><span id=__span-0-59><a id=__codelineno-0-59 name=__codelineno-0-59 href=#__codelineno-0-59></a>  +processarPagamento()
-</span><span id=__span-0-60><a id=__codelineno-0-60 name=__codelineno-0-60 href=#__codelineno-0-60></a>}
-</span><span id=__span-0-61><a id=__codelineno-0-61 name=__codelineno-0-61 href=#__codelineno-0-61></a>
-</span><span id=__span-0-62><a id=__codelineno-0-62 name=__codelineno-0-62 href=#__codelineno-0-62></a>enum TipoAssinatura {
-</span><span id=__span-0-63><a id=__codelineno-0-63 name=__codelineno-0-63 href=#__codelineno-0-63></a>  BASICO
-</span><span id=__span-0-64><a id=__codelineno-0-64 name=__codelineno-0-64 href=#__codelineno-0-64></a>  PREMIUM
-</span><span id=__span-0-65><a id=__codelineno-0-65 name=__codelineno-0-65 href=#__codelineno-0-65></a>}
-</span><span id=__span-0-66><a id=__codelineno-0-66 name=__codelineno-0-66 href=#__codelineno-0-66></a>
-</span><span id=__span-0-67><a id=__codelineno-0-67 name=__codelineno-0-67 href=#__codelineno-0-67></a>enum FormatoLivro {
-</span><span id=__span-0-68><a id=__codelineno-0-68 name=__codelineno-0-68 href=#__codelineno-0-68></a>  PDF
-</span><span id=__span-0-69><a id=__codelineno-0-69 name=__codelineno-0-69 href=#__codelineno-0-69></a>  EPUB
-</span><span id=__span-0-70><a id=__codelineno-0-70 name=__codelineno-0-70 href=#__codelineno-0-70></a>}
-</span><span id=__span-0-71><a id=__codelineno-0-71 name=__codelineno-0-71 href=#__codelineno-0-71></a>
-</span><span id=__span-0-72><a id=__codelineno-0-72 name=__codelineno-0-72 href=#__codelineno-0-72></a>enum StatusReserva {
-</span><span id=__span-0-73><a id=__codelineno-0-73 name=__codelineno-0-73 href=#__codelineno-0-73></a>  ATIVA
-</span><span id=__span-0-74><a id=__codelineno-0-74 name=__codelineno-0-74 href=#__codelineno-0-74></a>  EXPIRADA
-</span><span id=__span-0-75><a id=__codelineno-0-75 name=__codelineno-0-75 href=#__codelineno-0-75></a>  CONCLUIDA
-</span><span id=__span-0-76><a id=__codelineno-0-76 name=__codelineno-0-76 href=#__codelineno-0-76></a>}
-</span><span id=__span-0-77><a id=__codelineno-0-77 name=__codelineno-0-77 href=#__codelineno-0-77></a>
-</span><span id=__span-0-78><a id=__codelineno-0-78 name=__codelineno-0-78 href=#__codelineno-0-78></a>enum StatusAssinatura {
-</span><span id=__span-0-79><a id=__codelineno-0-79 name=__codelineno-0-79 href=#__codelineno-0-79></a>  ATIVA
-</span><span id=__span-0-80><a id=__codelineno-0-80 name=__codelineno-0-80 href=#__codelineno-0-80></a>  EXPIRADA
-</span><span id=__span-0-81><a id=__codelineno-0-81 name=__codelineno-0-81 href=#__codelineno-0-81></a>}
-</span><span id=__span-0-82><a id=__codelineno-0-82 name=__codelineno-0-82 href=#__codelineno-0-82></a>
-</span><span id=__span-0-83><a id=__codelineno-0-83 name=__codelineno-0-83 href=#__codelineno-0-83></a>enum StatusPagamento {
-</span><span id=__span-0-84><a id=__codelineno-0-84 name=__codelineno-0-84 href=#__codelineno-0-84></a>  PENDENTE
-</span><span id=__span-0-85><a id=__codelineno-0-85 name=__codelineno-0-85 href=#__codelineno-0-85></a>  APROVADO
-</span><span id=__span-0-86><a id=__codelineno-0-86 name=__codelineno-0-86 href=#__codelineno-0-86></a>  RECUSADO
-</span><span id=__span-0-87><a id=__codelineno-0-87 name=__codelineno-0-87 href=#__codelineno-0-87></a>}
-</span><span id=__span-0-88><a id=__codelineno-0-88 name=__codelineno-0-88 href=#__codelineno-0-88></a>
-</span><span id=__span-0-89><a id=__codelineno-0-89 name=__codelineno-0-89 href=#__codelineno-0-89></a>Usuario &quot;1&quot; -- &quot;0..*&quot; Reserva
-</span><span id=__span-0-90><a id=__codelineno-0-90 name=__codelineno-0-90 href=#__codelineno-0-90></a>Usuario &quot;1&quot; -- &quot;0..*&quot; Assinatura
-</span><span id=__span-0-91><a id=__codelineno-0-91 name=__codelineno-0-91 href=#__codelineno-0-91></a>Usuario &quot;1&quot; -- &quot;0..*&quot; Notificacao
-</span><span id=__span-0-92><a id=__codelineno-0-92 name=__codelineno-0-92 href=#__codelineno-0-92></a>Usuario &quot;1&quot; -- &quot;0..*&quot; Pagamento
-</span><span id=__span-0-93><a id=__codelineno-0-93 name=__codelineno-0-93 href=#__codelineno-0-93></a>Livro &quot;1&quot; -- &quot;0..*&quot; Reserva
-</span><span id=__span-0-94><a id=__codelineno-0-94 name=__codelineno-0-94 href=#__codelineno-0-94></a>Reserva &quot;*&quot; -- &quot;1&quot; Usuario
-</span><span id=__span-0-95><a id=__codelineno-0-95 name=__codelineno-0-95 href=#__codelineno-0-95></a>Reserva &quot;*&quot; -- &quot;1&quot; Livro
-</span><span id=__span-0-96><a id=__codelineno-0-96 name=__codelineno-0-96 href=#__codelineno-0-96></a>
-</span><span id=__span-0-97><a id=__codelineno-0-97 name=__codelineno-0-97 href=#__codelineno-0-97></a>@enduml
-</span></code></pre></div> </article> </div> <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script> </div> <button type=button class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg> Voltar para o topo </button> </main> <footer class=md-footer> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> Copyright ©️ 2025, Jonh Carvalho </div> Made with <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs </a> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <div class=md-progress data-md-component=progress role=progressbar></div> <script id=__config type=application/json>{"base": "../../../..", "features": ["content.code.copy", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script> <script src=../../../../assets/javascripts/bundle.f1b6f286.min.js></script> </body> </html>
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Jonh Carvalho">
+      
+      
+      
+        <link rel="prev" href="../uc_biblioteca/">
+      
+      
+        <link rel="next" href="../../../../Iniciacao/">
+      
+      
+      <link rel="icon" href="../../../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Diagrama de Classes - PBE_25.2_8004</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../../../assets/mkdocs_puml/puml.css">
+    
+      <link rel="stylesheet" href="../../../../assets/mkdocs_puml/interaction.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#documento-de-classes-e-diagrama-de-classe-conceitual" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../../.." title="PBE_25.2_8004" class="md-header__button md-logo" aria-label="PBE_25.2_8004" data-md-component="logo">
+      
+  <img src="../../../../assets/ibmec_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PBE_25.2_8004
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Diagrama de Classes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="black"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="amber"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jonh-carvalho/PBE_25.2_8004" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../aulas/" class="md-tabs__link">
+          
+  
+    
+  
+  Disciplina
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Iniciacao/" class="md-tabs__link">
+          
+  
+    
+  
+  Iniciação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Elaboracao/" class="md-tabs__link">
+          
+  
+    
+  
+  Elaboração
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Construcao/" class="md-tabs__link">
+          
+  
+    
+  
+  Construção
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Transicao/" class="md-tabs__link">
+          
+  
+    
+  
+  Transição
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../bibliografia/" class="md-tabs__link">
+        
+  
+    
+  
+  Bibliografia
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="PBE_25.2_8004" class="md-nav__button md-logo" aria-label="PBE_25.2_8004" data-md-component="logo">
+      
+  <img src="../../../../assets/ibmec_logo.png" alt="logo">
+
+    </a>
+    PBE_25.2_8004
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jonh-carvalho/PBE_25.2_8004" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Disciplina
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Disciplina
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aulas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aulas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ambiente/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ambiente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mkdocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mkdocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../codespace/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CodeSpace
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../avalia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Avaliações
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../issues_projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Issues e Projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dojo
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Dojo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dojo/dojo.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dojo/setup.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dojo/tddpairprogramming.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TDD/Pair
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Roteiros
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            Roteiros
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9_1" id="__nav_2_9_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Iniciação
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            Iniciação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Inicia%C3%A7%C3%A3o/04_DesignThinking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design Thinking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Inicia%C3%A7%C3%A3o/04_UPgithub/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_9_2" id="__nav_2_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Elaboração
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Elaboração
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../req_biblioteca/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uc_biblioteca/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Casos de Uso
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Diagrama de Classes
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Diagrama de Classes
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problema-de-modelagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problema de Modelagem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-descricao-das-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Descrição das Classes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Descrição das Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usuário
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#livro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Livro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reserva" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reserva
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assinatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assinatura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notificacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notificacao
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pagamento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-relacionamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Relacionamentos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-diagrama-de-classe-conceitual-uml" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Diagrama de Classe Conceitual (UML)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-observacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Observações
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Iniciacao/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Iniciação
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Iniciação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Iniciacao/pesquisa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pesquisa
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Iniciacao/cenario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cenário
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Iniciacao/5w2h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5w2h
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Iniciacao/brainstorm.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Brainstorming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Iniciacao/mapa_mental/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapa Mental
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Iniciacao/design_thinking.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design Thinking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Iniciacao/prototipobaixa_fidelidade.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prototipagem Baixa Fidelidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Elaboracao/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Elaboração
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Elaboração
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Elaboracao/espreq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Elaboracao/diagrama_casos_de_uso/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Casos de Uso
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Elaboracao/diagrama_de_classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diagrama de Classes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Elaboracao/diagrama_de_sequencia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diagrama de Sequência
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Elaboracao/prototipo_baixa_fidelidade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protótipo de Baixa Fidelidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Construcao/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Construção
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Construção
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Construcao/git_issues.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Issues
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Construcao/github_projects.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Construcao/codespace.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CodeSpace
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Transicao/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Transição
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Transição
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bibliografia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bibliografia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="documento-de-classes-e-diagrama-de-classe-conceitual">Documento de Classes e Diagrama de Classe Conceitual<a class="headerlink" href="#documento-de-classes-e-diagrama-de-classe-conceitual" title="Permanent link">&para;</a></h1>
+<h2 id="problema-de-modelagem">Problema de Modelagem<a class="headerlink" href="#problema-de-modelagem" title="Permanent link">&para;</a></h2>
+<p>Você foi contratado para desenvolver um sistema para gerenciar uma <strong>biblioteca de livros digitais</strong>. O sistema permitirá que os usuários façam login, procurem livros, reservem livros, e baixem cópias para leitura offline. A biblioteca também oferece assinatura premium, onde os usuários podem acessar livros exclusivos e ganhar vantagens especiais, como reservas antecipadas e downloads ilimitados.</p>
+<h2 id="1-introducao">1. Introdução<a class="headerlink" href="#1-introducao" title="Permanent link">&para;</a></h2>
+<p>Este documento apresenta a modelagem conceitual das principais classes do sistema de gerenciamento de biblioteca de livros digitais, conforme os requisitos especificados. O objetivo é fornecer uma visão clara das entidades, seus atributos e relacionamentos, servindo de base para o desenvolvimento posterior.</p>
+<h2 id="2-descricao-das-classes">2. Descrição das Classes<a class="headerlink" href="#2-descricao-das-classes" title="Permanent link">&para;</a></h2>
+<h3 id="usuario">Usuário<a class="headerlink" href="#usuario" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Atributos:</strong><ul>
+<li><code>id</code>: int</li>
+<li><code>nome</code>: string</li>
+<li><code>email</code>: string</li>
+<li><code>senha</code>: string (criptografada)</li>
+<li><code>tipo_assinatura</code>: enum (BÁSICO, PREMIUM)</li>
+</ul>
+</li>
+<li><strong>Métodos:</strong><ul>
+<li><code>autenticar()</code></li>
+<li><code>reservarLivro()</code></li>
+<li><code>baixarLivro()</code></li>
+<li><code>assinarPremium()</code></li>
+<li><code>receberNotificacao()</code></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="livro">Livro<a class="headerlink" href="#livro" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Atributos:</strong><ul>
+<li><code>id</code>: int</li>
+<li><code>titulo</code>: string</li>
+<li><code>autor</code>: string</li>
+<li><code>categoria</code>: string</li>
+<li><code>formato</code>: enum (PDF, EPUB)</li>
+<li><code>exclusivo</code>: bool</li>
+<li><code>disponivel</code>: bool</li>
+</ul>
+</li>
+<li><strong>Métodos:</strong><ul>
+<li><code>estaDisponivel()</code></li>
+<li><code>reservar()</code></li>
+<li><code>baixar()</code></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="reserva">Reserva<a class="headerlink" href="#reserva" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Atributos:</strong><ul>
+<li><code>id</code>: int</li>
+<li><code>usuario</code>: Usuário</li>
+<li><code>livro</code>: Livro</li>
+<li><code>data_reserva</code>: datetime</li>
+<li><code>data_expiracao</code>: datetime</li>
+<li><code>status</code>: enum (ATIVA, EXPIRADA, CONCLUÍDA)</li>
+</ul>
+</li>
+<li><strong>Métodos:</strong><ul>
+<li><code>verificarExpiracao()</code></li>
+<li><code>concluirReserva()</code></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="assinatura">Assinatura<a class="headerlink" href="#assinatura" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Atributos:</strong><ul>
+<li><code>id</code>: int</li>
+<li><code>usuario</code>: Usuário</li>
+<li><code>data_inicio</code>: datetime</li>
+<li><code>data_fim</code>: datetime</li>
+<li><code>status</code>: enum (ATIVA, EXPIRADA)</li>
+</ul>
+</li>
+<li><strong>Métodos:</strong><ul>
+<li><code>renovar()</code></li>
+<li><code>cancelar()</code></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="notificacao">Notificacao<a class="headerlink" href="#notificacao" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Atributos:</strong><ul>
+<li><code>id</code>: int</li>
+<li><code>usuario</code>: Usuário</li>
+<li><code>mensagem</code>: string</li>
+<li><code>data_envio</code>: datetime</li>
+<li><code>lida</code>: bool</li>
+</ul>
+</li>
+<li><strong>Métodos:</strong><ul>
+<li><code>marcarComoLida()</code></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="pagamento">Pagamento<a class="headerlink" href="#pagamento" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Atributos:</strong><ul>
+<li><code>id</code>: int</li>
+<li><code>usuario</code>: Usuário</li>
+<li><code>valor</code>: float</li>
+<li><code>data_pagamento</code>: datetime</li>
+<li><code>status</code>: enum (PENDENTE, APROVADO, RECUSADO)</li>
+</ul>
+</li>
+<li><strong>Métodos:</strong><ul>
+<li><code>processarPagamento()</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="3-relacionamentos">3. Relacionamentos<a class="headerlink" href="#3-relacionamentos" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Um <strong>Usuário</strong> pode ter várias <strong>Reservas</strong> e várias <strong>Assinaturas</strong>.</li>
+<li>Um <strong>Livro</strong> pode estar associado a várias <strong>Reservas</strong>.</li>
+<li>Uma <strong>Reserva</strong> está associada a um único <strong>Usuário</strong> e um único <strong>Livro</strong>.</li>
+<li>Um <strong>Usuário</strong> pode receber várias <strong>Notificações</strong>.</li>
+<li>Um <strong>Usuário</strong> pode realizar vários <strong>Pagamentos</strong>.</li>
+</ul>
+<h2 id="4-diagrama-de-classe-conceitual-uml">4. Diagrama de Classe Conceitual (UML)<a class="headerlink" href="#4-diagrama-de-classe-conceitual-uml" title="Permanent link">&para;</a></h2>
+<p>+----------------+        +----------------+        +----------------+
+|    Usuário     |&lt;&gt;-----o|    Reserva     |o-----&lt;&gt;|     Livro      |
++----------------+        +----------------+        +----------------+
+| id             |        | id             |        | id             |
+| nome           |        | data_reserva   |        | titulo         |
+| email          |        | data_expiracao |        | autor          |
+| senha          |        | status         |        | categoria      |
+| tipo_assinatura|        +----------------+        | formato        |
++----------------+                                 | exclusivo      |
+| autenticar()   |                                 | disponivel     |
+| reservarLivro()|                                 +----------------+
+| baixarLivro()  |                                 | estaDisponivel()|
+| assinarPremium()|                                | reservar()      |
+| receberNotif() |                                 | baixar()        |
++----------------+                                 +----------------+
+      | 1                                         1|      *
+      |                                            |
+      | *                                          |
++----------------+                                 |
+|  Assinatura    |                                 |
++----------------+                                 |
+| id             |                                 |
+| data_inicio    |                                 |
+| data_fim       |                                 |
+| status         |                                 |
++----------------+                                 |
+| renovar()      |                                 |
+| cancelar()     |                                 |
++----------------+                                 |
+      | 1                                          |
+      | *                                          |
++----------------+                                 |
+|  Notificacao   |                                 |
++----------------+                                 |
+| id             |                                 |
+| mensagem       |                                 |
+| data_envio     |                                 |
+| lida           |                                 |
++----------------+                                 |
+| marcarComoLida()|                                |
++----------------+                                 |
+      | 1                                          |
+      | *                                          |
++----------------+                                 |
+|   Pagamento    |                                 |
++----------------+                                 |
+| id             |                                 |
+| valor          |                                 |
+| data_pagamento |                                 |
+| status         |                                 |
++----------------+                                 |
+| processarPag() |                                 |
++----------------+                                 |</p>
+<h2 id="5-observacoes">5. Observações<a class="headerlink" href="#5-observacoes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>O diagrama acima é conceitual e pode ser refinado na modelagem lógica/física.</li>
+<li>As regras de negócio, como limites de reserva e acesso a livros exclusivos, são implementadas nos métodos das classes e validadas conforme o tipo de assinatura do usuário.</li>
+<li>A integração com o sistema de pagamento ocorre via classe <strong>Pagamento</strong>.</li>
+</ul>
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="CLASS" height="701px" preserveAspectRatio="xMidYMid meet" style="width:1290px;height:701px;background:#FFFFFF;" version="1.1" viewBox="0 0 1290 701" width="1290px" zoomAndPan="magnify" class="diagram"><defs/><g><g class="entity" data-entity="Usuario" data-source-line="2" data-uid="ent0002" id="entity_Usuario"><rect fill="#F1F1F1" height="210.9688" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="246.3018" x="600.26" y="7"/><ellipse cx="692.5588" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M695.5276,28.6406 Q694.9495,28.9375 694.3088,29.0781 Q693.6682,29.2344 692.9651,29.2344 Q690.4651,29.2344 689.137,27.5938 Q687.8245,25.9375 687.8245,22.8125 Q687.8245,19.6875 689.137,18.0313 Q690.4651,16.375 692.9651,16.375 Q693.6682,16.375 694.3088,16.5313 Q694.9651,16.6875 695.5276,16.9844 L695.5276,19.7031 Q694.9026,19.125 694.3088,18.8594 Q693.7151,18.5781 693.0901,18.5781 Q691.7463,18.5781 691.0588,19.6563 Q690.3713,20.7188 690.3713,22.8125 Q690.3713,24.9063 691.0588,25.9844 Q691.7463,27.0469 693.0901,27.0469 Q693.7151,27.0469 694.3088,26.7813 Q694.9026,26.5 695.5276,25.9219 L695.5276,28.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53.2041" x="713.0588" y="27.8467">Usuario</text><line style="stroke:#181818;stroke-width:0.5;" x1="601.26" x2="845.5618" y1="39" y2="39"/><ellipse cx="611.26" cy="52.6484" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.1953" x="620.26" y="55.9951">id: int</text><ellipse cx="611.26" cy="68.9453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89.0449" x="620.26" y="72.292">nome: string</text><ellipse cx="611.26" cy="85.2422" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87.9648" x="620.26" y="88.5889">email: string</text><ellipse cx="611.26" cy="101.5391" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91.5879" x="620.26" y="104.8857">senha: string</text><ellipse cx="611.26" cy="117.8359" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="220.3018" x="620.26" y="121.1826">tipo_assinatura: TipoAssinatura</text><line style="stroke:#181818;stroke-width:0.5;" x1="601.26" x2="845.5618" y1="128.4844" y2="128.4844"/><ellipse cx="611.26" cy="142.1328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82.7627" x="620.26" y="145.4795">autenticar()</text><ellipse cx="611.26" cy="158.4297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103.8721" x="620.26" y="161.7764">reservarLivro()</text><ellipse cx="611.26" cy="174.7266" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89.1953" x="620.26" y="178.0732">baixarLivro()</text><ellipse cx="611.26" cy="191.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124.0381" x="620.26" y="194.3701">assinarPremium()</text><ellipse cx="611.26" cy="207.3203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143.2129" x="620.26" y="210.667">receberNotificacao()</text></g><g class="entity" data-entity="Livro" data-source-line="15" data-uid="ent0003" id="entity_Livro"><rect fill="#F1F1F1" height="210.9688" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="183.6299" x="395.59" y="483.75"/><ellipse cx="466.007" cy="499.75" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M468.9757,505.3906 Q468.3976,505.6875 467.757,505.8281 Q467.1164,505.9844 466.4132,505.9844 Q463.9132,505.9844 462.5851,504.3438 Q461.2726,502.6875 461.2726,499.5625 Q461.2726,496.4375 462.5851,494.7813 Q463.9132,493.125 466.4132,493.125 Q467.1164,493.125 467.757,493.2813 Q468.4132,493.4375 468.9757,493.7344 L468.9757,496.4531 Q468.3507,495.875 467.757,495.6094 Q467.1632,495.3281 466.5382,495.3281 Q465.1945,495.3281 464.507,496.4063 Q463.8195,497.4688 463.8195,499.5625 Q463.8195,501.6563 464.507,502.7344 Q465.1945,503.7969 466.5382,503.7969 Q467.1632,503.7969 467.757,503.5313 Q468.3507,503.25 468.9757,502.6719 L468.9757,505.3906 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34.2959" x="486.507" y="504.5967">Livro</text><line style="stroke:#181818;stroke-width:0.5;" x1="396.59" x2="578.2199" y1="515.75" y2="515.75"/><ellipse cx="406.59" cy="529.3984" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.1953" x="415.59" y="532.7451">id: int</text><ellipse cx="406.59" cy="545.6953" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85.5518" x="415.59" y="549.042">titulo: string</text><ellipse cx="406.59" cy="561.9922" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86.6182" x="415.59" y="565.3389">autor: string</text><ellipse cx="406.59" cy="578.2891" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115.4111" x="415.59" y="581.6357">categoria: string</text><ellipse cx="406.59" cy="594.5859" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157.6299" x="415.59" y="597.9326">formato: FormatoLivro</text><ellipse cx="406.59" cy="610.8828" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.4668" x="415.59" y="614.2295">exclusivo: bool</text><ellipse cx="406.59" cy="627.1797" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110.1475" x="415.59" y="630.5264">disponivel: bool</text><line style="stroke:#181818;stroke-width:0.5;" x1="396.59" x2="578.2199" y1="637.8281" y2="637.8281"/><ellipse cx="406.59" cy="651.4766" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113.8662" x="415.59" y="654.8232">estaDisponivel()</text><ellipse cx="406.59" cy="667.7734" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69.5762" x="415.59" y="671.1201">reservar()</text><ellipse cx="406.59" cy="684.0703" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54.8994" x="415.59" y="687.417">baixar()</text></g><g class="entity" data-entity="Reserva" data-source-line="28" data-uid="ent0004" id="entity_Reserva"><rect fill="#F1F1F1" height="145.7813" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="205.751" x="384.53" y="277.97"/><ellipse cx="454.7214" cy="293.97" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M457.6902,299.6106 Q457.112,299.9075 456.4714,300.0481 Q455.8308,300.2044 455.1277,300.2044 Q452.6277,300.2044 451.2995,298.5638 Q449.987,296.9075 449.987,293.7825 Q449.987,290.6575 451.2995,289.0013 Q452.6277,287.345 455.1277,287.345 Q455.8308,287.345 456.4714,287.5013 Q457.1277,287.6575 457.6902,287.9544 L457.6902,290.6731 Q457.0652,290.095 456.4714,289.8294 Q455.8777,289.5481 455.2527,289.5481 Q453.9089,289.5481 453.2214,290.6263 Q452.5339,291.6888 452.5339,293.7825 Q452.5339,295.8763 453.2214,296.9544 Q453.9089,298.0169 455.2527,298.0169 Q455.8777,298.0169 456.4714,297.7513 Q457.0652,297.47 457.6902,296.8919 L457.6902,299.6106 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56.8682" x="475.2214" y="298.8167">Reserva</text><line style="stroke:#181818;stroke-width:0.5;" x1="385.53" x2="589.281" y1="309.97" y2="309.97"/><ellipse cx="395.53" cy="323.6184" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.1953" x="404.53" y="326.9651">id: int</text><ellipse cx="395.53" cy="339.9153" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163.7959" x="404.53" y="343.262">data_reserva: datetime</text><ellipse cx="395.53" cy="356.2122" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="179.751" x="404.53" y="359.5589">data_expiracao: datetime</text><ellipse cx="395.53" cy="372.5091" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153.665" x="404.53" y="375.8557">status: StatusReserva</text><line style="stroke:#181818;stroke-width:0.5;" x1="385.53" x2="589.281" y1="383.1575" y2="383.1575"/><ellipse cx="395.53" cy="396.8059" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137.4023" x="404.53" y="400.1526">verificarExpiracao()</text><ellipse cx="395.53" cy="413.1028" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123.0332" x="404.53" y="416.4495">concluirReserva()</text></g><g class="entity" data-entity="Assinatura" data-source-line="37" data-uid="ent0005" id="entity_Assinatura"><rect fill="#F1F1F1" height="145.7813" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="197.001" x="624.91" y="277.97"/><ellipse cx="682.0584" cy="293.97" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M685.0272,299.6106 Q684.4491,299.9075 683.8084,300.0481 Q683.1678,300.2044 682.4647,300.2044 Q679.9647,300.2044 678.6366,298.5638 Q677.3241,296.9075 677.3241,293.7825 Q677.3241,290.6575 678.6366,289.0013 Q679.9647,287.345 682.4647,287.345 Q683.1678,287.345 683.8084,287.5013 Q684.4647,287.6575 685.0272,287.9544 L685.0272,290.6731 Q684.4022,290.095 683.8084,289.8294 Q683.2147,289.5481 682.5897,289.5481 Q681.2459,289.5481 680.5584,290.6263 Q679.8709,291.6888 679.8709,293.7825 Q679.8709,295.8763 680.5584,296.9544 Q681.2459,298.0169 682.5897,298.0169 Q683.2147,298.0169 683.8084,297.7513 Q684.4022,297.47 685.0272,296.8919 L685.0272,299.6106 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74.2041" x="702.5584" y="298.8167">Assinatura</text><line style="stroke:#181818;stroke-width:0.5;" x1="625.91" x2="820.911" y1="309.97" y2="309.97"/><ellipse cx="635.91" cy="323.6184" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.1953" x="644.91" y="326.9651">id: int</text><ellipse cx="635.91" cy="339.9153" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147.7041" x="644.91" y="343.262">data_inicio: datetime</text><ellipse cx="635.91" cy="356.2122" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="133.3555" x="644.91" y="359.5589">data_fim: datetime</text><ellipse cx="635.91" cy="372.5091" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="171.001" x="644.91" y="375.8557">status: StatusAssinatura</text><line style="stroke:#181818;stroke-width:0.5;" x1="625.91" x2="820.911" y1="383.1575" y2="383.1575"/><ellipse cx="635.91" cy="396.8059" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65.3516" x="644.91" y="400.1526">renovar()</text><ellipse cx="635.91" cy="413.1028" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70.6084" x="644.91" y="416.4495">cancelar()</text></g><g class="entity" data-entity="Notificacao" data-source-line="46" data-uid="ent0006" id="entity_Notificacao"><rect fill="#F1F1F1" height="129.4844" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="175.126" x="856.84" y="286.12"/><ellipse cx="900.9876" cy="302.12" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M903.9564,307.7606 Q903.3782,308.0575 902.7376,308.1981 Q902.097,308.3544 901.3939,308.3544 Q898.8939,308.3544 897.5657,306.7138 Q896.2532,305.0575 896.2532,301.9325 Q896.2532,298.8075 897.5657,297.1513 Q898.8939,295.495 901.3939,295.495 Q902.097,295.495 902.7376,295.6513 Q903.3939,295.8075 903.9564,296.1044 L903.9564,298.8231 Q903.3314,298.245 902.7376,297.9794 Q902.1439,297.6981 901.5189,297.6981 Q900.1751,297.6981 899.4876,298.7763 Q898.8001,299.8388 898.8001,301.9325 Q898.8001,304.0263 899.4876,305.1044 Q900.1751,306.1669 901.5189,306.1669 Q902.1439,306.1669 902.7376,305.9013 Q903.3314,305.62 903.9564,305.0419 L903.9564,307.7606 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.3535" x="921.4649" y="306.9667">Notificacao</text><line style="stroke:#181818;stroke-width:0.5;" x1="857.84" x2="1030.966" y1="318.12" y2="318.12"/><ellipse cx="867.84" cy="331.7684" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.1953" x="876.84" y="335.1151">id: int</text><ellipse cx="867.84" cy="348.0653" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127.4902" x="876.84" y="351.412">mensagem: string</text><ellipse cx="867.84" cy="364.3622" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149.126" x="876.84" y="367.7089">data_envio: datetime</text><ellipse cx="867.84" cy="380.6591" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64.3193" x="876.84" y="384.0057">lida: bool</text><line style="stroke:#181818;stroke-width:0.5;" x1="857.84" x2="1030.966" y1="391.3075" y2="391.3075"/><ellipse cx="867.84" cy="404.9559" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="130.6279" x="876.84" y="408.3026">marcarComoLida()</text></g><g class="entity" data-entity="Pagamento" data-source-line="54" data-uid="ent0007" id="entity_Pagamento"><rect fill="#F1F1F1" height="129.4844" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="217.0098" x="1066.9" y="286.12"/><ellipse cx="1131.3219" cy="302.12" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M1134.2906,307.7606 Q1133.7125,308.0575 1133.0719,308.1981 Q1132.4313,308.3544 1131.7281,308.3544 Q1129.2281,308.3544 1127.9,306.7138 Q1126.5875,305.0575 1126.5875,301.9325 Q1126.5875,298.8075 1127.9,297.1513 Q1129.2281,295.495 1131.7281,295.495 Q1132.4313,295.495 1133.0719,295.6513 Q1133.7281,295.8075 1134.2906,296.1044 L1134.2906,298.8231 Q1133.6656,298.245 1133.0719,297.9794 Q1132.4781,297.6981 1131.8531,297.6981 Q1130.5094,297.6981 1129.8219,298.7763 Q1129.1344,299.8388 1129.1344,301.9325 Q1129.1344,304.0263 1129.8219,305.1044 Q1130.5094,306.1669 1131.8531,306.1669 Q1132.4781,306.1669 1133.0719,305.9013 Q1133.6656,305.62 1134.2906,305.0419 L1134.2906,307.7606 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79.666" x="1151.8219" y="306.9667">Pagamento</text><line style="stroke:#181818;stroke-width:0.5;" x1="1067.9" x2="1282.9098" y1="318.12" y2="318.12"/><ellipse cx="1077.9" cy="331.7684" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.1953" x="1086.9" y="335.1151">id: int</text><ellipse cx="1077.9" cy="348.0653" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75.6943" x="1086.9" y="351.412">valor: float</text><ellipse cx="1077.9" cy="364.3622" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="191.0098" x="1086.9" y="367.7089">data_pagamento: datetime</text><ellipse cx="1077.9" cy="380.6591" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="176.4629" x="1086.9" y="384.0057">status: StatusPagamento</text><line style="stroke:#181818;stroke-width:0.5;" x1="1067.9" x2="1282.9098" y1="391.3075" y2="391.3075"/><ellipse cx="1077.9" cy="404.9559" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159.0313" x="1086.9" y="408.3026">processarPagamento()</text></g><g class="entity" data-entity="TipoAssinatura" data-source-line="62" data-uid="ent0008" id="entity_TipoAssinatura"><rect fill="#F1F1F1" height="80.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="136.0977" x="14.36" y="72.19"/><ellipse cx="29.36" cy="88.19" fill="#EB937F" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M33.4694,94.19 L25.7506,94.19 L25.7506,81.7994 L33.4694,81.7994 L33.4694,83.9556 L28.2038,83.9556 L28.2038,86.6275 L32.9694,86.6275 L32.9694,88.7838 L28.2038,88.7838 L28.2038,92.0338 L33.4694,92.0338 L33.4694,94.19 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.0977" x="43.36" y="93.0367">TipoAssinatura</text><line style="stroke:#181818;stroke-width:0.5;" x1="15.36" x2="149.4577" y1="104.19" y2="104.19"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52.9922" x="20.36" y="121.1851">BASICO</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65.5498" x="20.36" y="137.482">PREMIUM</text><line style="stroke:#181818;stroke-width:0.5;" x1="15.36" x2="149.4577" y1="144.7838" y2="144.7838"/></g><g class="entity" data-entity="FormatoLivro" data-source-line="67" data-uid="ent0009" id="entity_FormatoLivro"><rect fill="#F1F1F1" height="80.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="124.9414" x="185.94" y="72.19"/><ellipse cx="200.94" cy="88.19" fill="#EB937F" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M205.0494,94.19 L197.3306,94.19 L197.3306,81.7994 L205.0494,81.7994 L205.0494,83.9556 L199.7838,83.9556 L199.7838,86.6275 L204.5494,86.6275 L204.5494,88.7838 L199.7838,88.7838 L199.7838,92.0338 L205.0494,92.0338 L205.0494,94.19 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92.9414" x="214.94" y="93.0367">FormatoLivro</text><line style="stroke:#181818;stroke-width:0.5;" x1="186.94" x2="309.8814" y1="104.19" y2="104.19"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="27.2754" x="191.94" y="121.1851">PDF</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37.1396" x="191.94" y="137.482">EPUB</text><line style="stroke:#181818;stroke-width:0.5;" x1="186.94" x2="309.8814" y1="144.7838" y2="144.7838"/></g><g class="entity" data-entity="StatusReserva" data-source-line="72" data-uid="ent0010" id="entity_StatusReserva"><rect fill="#F1F1F1" height="96.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="133.4795" x="345.67" y="64.04"/><ellipse cx="360.67" cy="80.04" fill="#EB937F" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M364.7794,86.04 L357.0606,86.04 L357.0606,73.6494 L364.7794,73.6494 L364.7794,75.8056 L359.5138,75.8056 L359.5138,78.4775 L364.2794,78.4775 L364.2794,80.6338 L359.5138,80.6338 L359.5138,83.8838 L364.7794,83.8838 L364.7794,86.04 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101.4795" x="374.67" y="84.8867">StatusReserva</text><line style="stroke:#181818;stroke-width:0.5;" x1="346.67" x2="478.1495" y1="96.04" y2="96.04"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41.4121" x="351.67" y="113.0351">ATIVA</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70.6699" x="351.67" y="129.332">EXPIRADA</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83.5762" x="351.67" y="145.6289">CONCLUIDA</text><line style="stroke:#181818;stroke-width:0.5;" x1="346.67" x2="478.1495" y1="152.9306" y2="152.9306"/></g><g class="entity" data-entity="StatusAssinatura" data-source-line="78" data-uid="ent0011" id="entity_StatusAssinatura"><rect fill="#F1F1F1" height="80.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="150.8154" x="7" y="310.56"/><ellipse cx="22" cy="326.56" fill="#EB937F" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M26.1094,332.56 L18.3906,332.56 L18.3906,320.1694 L26.1094,320.1694 L26.1094,322.3256 L20.8438,322.3256 L20.8438,324.9975 L25.6094,324.9975 L25.6094,327.1538 L20.8438,327.1538 L20.8438,330.4038 L26.1094,330.4038 L26.1094,332.56 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118.8154" x="36" y="331.4067">StatusAssinatura</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="156.8154" y1="342.56" y2="342.56"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41.4121" x="13" y="359.5551">ATIVA</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70.6699" x="13" y="375.852">EXPIRADA</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="156.8154" y1="383.1538" y2="383.1538"/></g><g class="entity" data-entity="StatusPagamento" data-source-line="83" data-uid="ent0012" id="entity_StatusPagamento"><rect fill="#F1F1F1" height="96.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="156.2773" x="193.27" y="302.42"/><ellipse cx="208.27" cy="318.42" fill="#EB937F" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/><path d="M212.3794,324.42 L204.6606,324.42 L204.6606,312.0294 L212.3794,312.0294 L212.3794,314.1856 L207.1138,314.1856 L207.1138,316.8575 L211.8794,316.8575 L211.8794,319.0138 L207.1138,319.0138 L207.1138,322.2638 L212.3794,322.2638 L212.3794,324.42 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124.2773" x="222.27" y="323.2667">StatusPagamento</text><line style="stroke:#181818;stroke-width:0.5;" x1="194.27" x2="348.5473" y1="334.42" y2="334.42"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75.2568" x="199.27" y="351.4151">PENDENTE</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79.7207" x="199.27" y="367.712">APROVADO</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.8594" x="199.27" y="384.0089">RECUSADO</text><line style="stroke:#181818;stroke-width:0.5;" x1="194.27" x2="348.5473" y1="391.3106" y2="391.3106"/></g><g class="link" data-entity-1="Usuario" data-entity-2="Reserva" data-source-line="89" data-uid="lnk13" id="link_Usuario_Reserva"><path codeLine="89" d="M606.19,218.2 C585.87,238.32 565.52,258.98 547.52,277.79" fill="none" id="Usuario-Reserva" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.271" x="590.0546" y="237.878">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="529.3072" y="266.9323">0..*</text></g><g class="link" data-entity-1="Reserva" data-entity-2="Usuario" data-source-line="94" data-uid="lnk18" id="link_Reserva_Usuario"><path codeLine="94" d="M571.91,277.79 C591.51,258.98 612.42,238.32 632.29,218.2" fill="none" id="Reserva-Usuario" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="6.5" x="573.9577" y="266.9323">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.271" x="617.9082" y="237.878">1</text></g><g class="link" data-entity-1="Usuario" data-entity-2="Assinatura" data-source-line="90" data-uid="lnk14" id="link_Usuario_Assinatura"><path codeLine="90" d="M723.41,218.2 C723.41,238.32 723.41,258.98 723.41,277.79" fill="none" id="Usuario-Assinatura" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.271" x="715.1503" y="237.878">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="699.2797" y="266.9323">0..*</text></g><g class="link" data-entity-1="Usuario" data-entity-2="Notificacao" data-source-line="91" data-uid="lnk15" id="link_Usuario_Notificacao"><path codeLine="91" d="M821.31,218.2 C842.78,241.16 864.9,264.82 884.36,285.63" fill="none" id="Usuario-Notificacao" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.271" x="819.628" y="237.878">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="853.984" y="275.2032">0..*</text></g><g class="link" data-entity-1="Usuario" data-entity-2="Pagamento" data-source-line="92" data-uid="lnk16" id="link_Usuario_Pagamento"><path codeLine="92" d="M846.86,173.91 C908.15,204.38 983.09,242.35 1049.41,277.97 C1055.07,281.01 1060.85,284.16 1066.67,287.36" fill="none" id="Usuario-Pagamento" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.271" x="854.6347" y="174.267">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="1035.9686" y="279.8826">0..*</text></g><g class="link" data-entity-1="Livro" data-entity-2="Reserva" data-source-line="93" data-uid="lnk17" id="link_Livro_Reserva"><path codeLine="93" d="M500.83,483.41 C501.06,463.36 500.77,442.8 499.96,424.07" fill="none" id="Livro-Reserva" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.271" x="493.5022" y="472.5134">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="477.0622" y="443.8358">0..*</text></g><g class="link" data-entity-1="Reserva" data-entity-2="Livro" data-source-line="95" data-uid="lnk19" id="link_Reserva_Livro"><path codeLine="95" d="M475.56,424.07 C474.79,442.8 474.51,463.36 474.73,483.41" fill="none" id="Reserva-Livro" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="6.5" x="468.1689" y="443.8358">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.271" x="465.5671" y="472.5134">1</text></g></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="CLASS" height="701px" preserveAspectRatio="xMidYMid meet" style="width:1290px;height:701px;background:#1B1B1B;" version="1.1" viewBox="0 0 1290 701" width="1290px" zoomAndPan="magnify" class="diagram"><defs/><g><rect fill="#1B1B1B" height="701" style="stroke:none;stroke-width:1;" width="1290" x="0" y="0"/><g class="entity" data-entity="Usuario" data-source-line="2" data-uid="ent0002" id="entity_Usuario"><rect fill="#313139" height="210.9688" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="246.3018" x="600.26" y="7"/><ellipse cx="692.5588" cy="23" fill="#2E5233" rx="11" ry="11" style="stroke:#E7E7E7;stroke-width:1;"/><path d="M695.5276,28.6406 Q694.9495,28.9375 694.3088,29.0781 Q693.6682,29.2344 692.9651,29.2344 Q690.4651,29.2344 689.137,27.5938 Q687.8245,25.9375 687.8245,22.8125 Q687.8245,19.6875 689.137,18.0313 Q690.4651,16.375 692.9651,16.375 Q693.6682,16.375 694.3088,16.5313 Q694.9651,16.6875 695.5276,16.9844 L695.5276,19.7031 Q694.9026,19.125 694.3088,18.8594 Q693.7151,18.5781 693.0901,18.5781 Q691.7463,18.5781 691.0588,19.6563 Q690.3713,20.7188 690.3713,22.8125 Q690.3713,24.9063 691.0588,25.9844 Q691.7463,27.0469 693.0901,27.0469 Q693.7151,27.0469 694.3088,26.7813 Q694.9026,26.5 695.5276,25.9219 L695.5276,28.6406 Z " fill="#FFFFFF"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53.2041" x="713.0588" y="27.8467">Usuario</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="601.26" x2="845.5618" y1="39" y2="39"/><ellipse cx="611.26" cy="52.6484" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.1953" x="620.26" y="55.9951">id: int</text><ellipse cx="611.26" cy="68.9453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89.0449" x="620.26" y="72.292">nome: string</text><ellipse cx="611.26" cy="85.2422" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87.9648" x="620.26" y="88.5889">email: string</text><ellipse cx="611.26" cy="101.5391" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91.5879" x="620.26" y="104.8857">senha: string</text><ellipse cx="611.26" cy="117.8359" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="220.3018" x="620.26" y="121.1826">tipo_assinatura: TipoAssinatura</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="601.26" x2="845.5618" y1="128.4844" y2="128.4844"/><ellipse cx="611.26" cy="142.1328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82.7627" x="620.26" y="145.4795">autenticar()</text><ellipse cx="611.26" cy="158.4297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103.8721" x="620.26" y="161.7764">reservarLivro()</text><ellipse cx="611.26" cy="174.7266" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89.1953" x="620.26" y="178.0732">baixarLivro()</text><ellipse cx="611.26" cy="191.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124.0381" x="620.26" y="194.3701">assinarPremium()</text><ellipse cx="611.26" cy="207.3203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143.2129" x="620.26" y="210.667">receberNotificacao()</text></g><g class="entity" data-entity="Livro" data-source-line="15" data-uid="ent0003" id="entity_Livro"><rect fill="#313139" height="210.9688" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="183.6299" x="395.59" y="483.75"/><ellipse cx="466.007" cy="499.75" fill="#2E5233" rx="11" ry="11" style="stroke:#E7E7E7;stroke-width:1;"/><path d="M468.9757,505.3906 Q468.3976,505.6875 467.757,505.8281 Q467.1164,505.9844 466.4132,505.9844 Q463.9132,505.9844 462.5851,504.3438 Q461.2726,502.6875 461.2726,499.5625 Q461.2726,496.4375 462.5851,494.7813 Q463.9132,493.125 466.4132,493.125 Q467.1164,493.125 467.757,493.2813 Q468.4132,493.4375 468.9757,493.7344 L468.9757,496.4531 Q468.3507,495.875 467.757,495.6094 Q467.1632,495.3281 466.5382,495.3281 Q465.1945,495.3281 464.507,496.4063 Q463.8195,497.4688 463.8195,499.5625 Q463.8195,501.6563 464.507,502.7344 Q465.1945,503.7969 466.5382,503.7969 Q467.1632,503.7969 467.757,503.5313 Q468.3507,503.25 468.9757,502.6719 L468.9757,505.3906 Z " fill="#FFFFFF"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34.2959" x="486.507" y="504.5967">Livro</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="396.59" x2="578.2199" y1="515.75" y2="515.75"/><ellipse cx="406.59" cy="529.3984" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.1953" x="415.59" y="532.7451">id: int</text><ellipse cx="406.59" cy="545.6953" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85.5518" x="415.59" y="549.042">titulo: string</text><ellipse cx="406.59" cy="561.9922" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86.6182" x="415.59" y="565.3389">autor: string</text><ellipse cx="406.59" cy="578.2891" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115.4111" x="415.59" y="581.6357">categoria: string</text><ellipse cx="406.59" cy="594.5859" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157.6299" x="415.59" y="597.9326">formato: FormatoLivro</text><ellipse cx="406.59" cy="610.8828" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.4668" x="415.59" y="614.2295">exclusivo: bool</text><ellipse cx="406.59" cy="627.1797" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110.1475" x="415.59" y="630.5264">disponivel: bool</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="396.59" x2="578.2199" y1="637.8281" y2="637.8281"/><ellipse cx="406.59" cy="651.4766" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113.8662" x="415.59" y="654.8232">estaDisponivel()</text><ellipse cx="406.59" cy="667.7734" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69.5762" x="415.59" y="671.1201">reservar()</text><ellipse cx="406.59" cy="684.0703" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54.8994" x="415.59" y="687.417">baixar()</text></g><g class="entity" data-entity="Reserva" data-source-line="28" data-uid="ent0004" id="entity_Reserva"><rect fill="#313139" height="145.7813" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="205.751" x="384.53" y="277.97"/><ellipse cx="454.7214" cy="293.97" fill="#2E5233" rx="11" ry="11" style="stroke:#E7E7E7;stroke-width:1;"/><path d="M457.6902,299.6106 Q457.112,299.9075 456.4714,300.0481 Q455.8308,300.2044 455.1277,300.2044 Q452.6277,300.2044 451.2995,298.5638 Q449.987,296.9075 449.987,293.7825 Q449.987,290.6575 451.2995,289.0013 Q452.6277,287.345 455.1277,287.345 Q455.8308,287.345 456.4714,287.5013 Q457.1277,287.6575 457.6902,287.9544 L457.6902,290.6731 Q457.0652,290.095 456.4714,289.8294 Q455.8777,289.5481 455.2527,289.5481 Q453.9089,289.5481 453.2214,290.6263 Q452.5339,291.6888 452.5339,293.7825 Q452.5339,295.8763 453.2214,296.9544 Q453.9089,298.0169 455.2527,298.0169 Q455.8777,298.0169 456.4714,297.7513 Q457.0652,297.47 457.6902,296.8919 L457.6902,299.6106 Z " fill="#FFFFFF"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56.8682" x="475.2214" y="298.8167">Reserva</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="385.53" x2="589.281" y1="309.97" y2="309.97"/><ellipse cx="395.53" cy="323.6184" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.1953" x="404.53" y="326.9651">id: int</text><ellipse cx="395.53" cy="339.9153" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163.7959" x="404.53" y="343.262">data_reserva: datetime</text><ellipse cx="395.53" cy="356.2122" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="179.751" x="404.53" y="359.5589">data_expiracao: datetime</text><ellipse cx="395.53" cy="372.5091" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153.665" x="404.53" y="375.8557">status: StatusReserva</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="385.53" x2="589.281" y1="383.1575" y2="383.1575"/><ellipse cx="395.53" cy="396.8059" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137.4023" x="404.53" y="400.1526">verificarExpiracao()</text><ellipse cx="395.53" cy="413.1028" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123.0332" x="404.53" y="416.4495">concluirReserva()</text></g><g class="entity" data-entity="Assinatura" data-source-line="37" data-uid="ent0005" id="entity_Assinatura"><rect fill="#313139" height="145.7813" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="197.001" x="624.91" y="277.97"/><ellipse cx="682.0584" cy="293.97" fill="#2E5233" rx="11" ry="11" style="stroke:#E7E7E7;stroke-width:1;"/><path d="M685.0272,299.6106 Q684.4491,299.9075 683.8084,300.0481 Q683.1678,300.2044 682.4647,300.2044 Q679.9647,300.2044 678.6366,298.5638 Q677.3241,296.9075 677.3241,293.7825 Q677.3241,290.6575 678.6366,289.0013 Q679.9647,287.345 682.4647,287.345 Q683.1678,287.345 683.8084,287.5013 Q684.4647,287.6575 685.0272,287.9544 L685.0272,290.6731 Q684.4022,290.095 683.8084,289.8294 Q683.2147,289.5481 682.5897,289.5481 Q681.2459,289.5481 680.5584,290.6263 Q679.8709,291.6888 679.8709,293.7825 Q679.8709,295.8763 680.5584,296.9544 Q681.2459,298.0169 682.5897,298.0169 Q683.2147,298.0169 683.8084,297.7513 Q684.4022,297.47 685.0272,296.8919 L685.0272,299.6106 Z " fill="#FFFFFF"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74.2041" x="702.5584" y="298.8167">Assinatura</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="625.91" x2="820.911" y1="309.97" y2="309.97"/><ellipse cx="635.91" cy="323.6184" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.1953" x="644.91" y="326.9651">id: int</text><ellipse cx="635.91" cy="339.9153" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147.7041" x="644.91" y="343.262">data_inicio: datetime</text><ellipse cx="635.91" cy="356.2122" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="133.3555" x="644.91" y="359.5589">data_fim: datetime</text><ellipse cx="635.91" cy="372.5091" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="171.001" x="644.91" y="375.8557">status: StatusAssinatura</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="625.91" x2="820.911" y1="383.1575" y2="383.1575"/><ellipse cx="635.91" cy="396.8059" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65.3516" x="644.91" y="400.1526">renovar()</text><ellipse cx="635.91" cy="413.1028" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70.6084" x="644.91" y="416.4495">cancelar()</text></g><g class="entity" data-entity="Notificacao" data-source-line="46" data-uid="ent0006" id="entity_Notificacao"><rect fill="#313139" height="129.4844" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="175.126" x="856.84" y="286.12"/><ellipse cx="900.9876" cy="302.12" fill="#2E5233" rx="11" ry="11" style="stroke:#E7E7E7;stroke-width:1;"/><path d="M903.9564,307.7606 Q903.3782,308.0575 902.7376,308.1981 Q902.097,308.3544 901.3939,308.3544 Q898.8939,308.3544 897.5657,306.7138 Q896.2532,305.0575 896.2532,301.9325 Q896.2532,298.8075 897.5657,297.1513 Q898.8939,295.495 901.3939,295.495 Q902.097,295.495 902.7376,295.6513 Q903.3939,295.8075 903.9564,296.1044 L903.9564,298.8231 Q903.3314,298.245 902.7376,297.9794 Q902.1439,297.6981 901.5189,297.6981 Q900.1751,297.6981 899.4876,298.7763 Q898.8001,299.8388 898.8001,301.9325 Q898.8001,304.0263 899.4876,305.1044 Q900.1751,306.1669 901.5189,306.1669 Q902.1439,306.1669 902.7376,305.9013 Q903.3314,305.62 903.9564,305.0419 L903.9564,307.7606 Z " fill="#FFFFFF"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.3535" x="921.4649" y="306.9667">Notificacao</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="857.84" x2="1030.966" y1="318.12" y2="318.12"/><ellipse cx="867.84" cy="331.7684" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.1953" x="876.84" y="335.1151">id: int</text><ellipse cx="867.84" cy="348.0653" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127.4902" x="876.84" y="351.412">mensagem: string</text><ellipse cx="867.84" cy="364.3622" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149.126" x="876.84" y="367.7089">data_envio: datetime</text><ellipse cx="867.84" cy="380.6591" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64.3193" x="876.84" y="384.0057">lida: bool</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="857.84" x2="1030.966" y1="391.3075" y2="391.3075"/><ellipse cx="867.84" cy="404.9559" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="130.6279" x="876.84" y="408.3026">marcarComoLida()</text></g><g class="entity" data-entity="Pagamento" data-source-line="54" data-uid="ent0007" id="entity_Pagamento"><rect fill="#313139" height="129.4844" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="217.0098" x="1066.9" y="286.12"/><ellipse cx="1131.3219" cy="302.12" fill="#2E5233" rx="11" ry="11" style="stroke:#E7E7E7;stroke-width:1;"/><path d="M1134.2906,307.7606 Q1133.7125,308.0575 1133.0719,308.1981 Q1132.4313,308.3544 1131.7281,308.3544 Q1129.2281,308.3544 1127.9,306.7138 Q1126.5875,305.0575 1126.5875,301.9325 Q1126.5875,298.8075 1127.9,297.1513 Q1129.2281,295.495 1131.7281,295.495 Q1132.4313,295.495 1133.0719,295.6513 Q1133.7281,295.8075 1134.2906,296.1044 L1134.2906,298.8231 Q1133.6656,298.245 1133.0719,297.9794 Q1132.4781,297.6981 1131.8531,297.6981 Q1130.5094,297.6981 1129.8219,298.7763 Q1129.1344,299.8388 1129.1344,301.9325 Q1129.1344,304.0263 1129.8219,305.1044 Q1130.5094,306.1669 1131.8531,306.1669 Q1132.4781,306.1669 1133.0719,305.9013 Q1133.6656,305.62 1134.2906,305.0419 L1134.2906,307.7606 Z " fill="#FFFFFF"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79.666" x="1151.8219" y="306.9667">Pagamento</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="1067.9" x2="1282.9098" y1="318.12" y2="318.12"/><ellipse cx="1077.9" cy="331.7684" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.1953" x="1086.9" y="335.1151">id: int</text><ellipse cx="1077.9" cy="348.0653" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75.6943" x="1086.9" y="351.412">valor: float</text><ellipse cx="1077.9" cy="364.3622" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="191.0098" x="1086.9" y="367.7089">data_pagamento: datetime</text><ellipse cx="1077.9" cy="380.6591" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="176.4629" x="1086.9" y="384.0057">status: StatusPagamento</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="1067.9" x2="1282.9098" y1="391.3075" y2="391.3075"/><ellipse cx="1077.9" cy="404.9559" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159.0313" x="1086.9" y="408.3026">processarPagamento()</text></g><g class="entity" data-entity="TipoAssinatura" data-source-line="62" data-uid="ent0008" id="entity_TipoAssinatura"><rect fill="#313139" height="80.5938" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="136.0977" x="14.36" y="72.19"/><ellipse cx="29.36" cy="88.19" fill="#852D19" rx="11" ry="11" style="stroke:#E7E7E7;stroke-width:1;"/><path d="M33.4694,94.19 L25.7506,94.19 L25.7506,81.7994 L33.4694,81.7994 L33.4694,83.9556 L28.2038,83.9556 L28.2038,86.6275 L32.9694,86.6275 L32.9694,88.7838 L28.2038,88.7838 L28.2038,92.0338 L33.4694,92.0338 L33.4694,94.19 Z " fill="#FFFFFF"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.0977" x="43.36" y="93.0367">TipoAssinatura</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="15.36" x2="149.4577" y1="104.19" y2="104.19"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52.9922" x="20.36" y="121.1851">BASICO</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65.5498" x="20.36" y="137.482">PREMIUM</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="15.36" x2="149.4577" y1="144.7838" y2="144.7838"/></g><g class="entity" data-entity="FormatoLivro" data-source-line="67" data-uid="ent0009" id="entity_FormatoLivro"><rect fill="#313139" height="80.5938" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="124.9414" x="185.94" y="72.19"/><ellipse cx="200.94" cy="88.19" fill="#852D19" rx="11" ry="11" style="stroke:#E7E7E7;stroke-width:1;"/><path d="M205.0494,94.19 L197.3306,94.19 L197.3306,81.7994 L205.0494,81.7994 L205.0494,83.9556 L199.7838,83.9556 L199.7838,86.6275 L204.5494,86.6275 L204.5494,88.7838 L199.7838,88.7838 L199.7838,92.0338 L205.0494,92.0338 L205.0494,94.19 Z " fill="#FFFFFF"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92.9414" x="214.94" y="93.0367">FormatoLivro</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="186.94" x2="309.8814" y1="104.19" y2="104.19"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="27.2754" x="191.94" y="121.1851">PDF</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37.1396" x="191.94" y="137.482">EPUB</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="186.94" x2="309.8814" y1="144.7838" y2="144.7838"/></g><g class="entity" data-entity="StatusReserva" data-source-line="72" data-uid="ent0010" id="entity_StatusReserva"><rect fill="#313139" height="96.8906" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="133.4795" x="345.67" y="64.04"/><ellipse cx="360.67" cy="80.04" fill="#852D19" rx="11" ry="11" style="stroke:#E7E7E7;stroke-width:1;"/><path d="M364.7794,86.04 L357.0606,86.04 L357.0606,73.6494 L364.7794,73.6494 L364.7794,75.8056 L359.5138,75.8056 L359.5138,78.4775 L364.2794,78.4775 L364.2794,80.6338 L359.5138,80.6338 L359.5138,83.8838 L364.7794,83.8838 L364.7794,86.04 Z " fill="#FFFFFF"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101.4795" x="374.67" y="84.8867">StatusReserva</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="346.67" x2="478.1495" y1="96.04" y2="96.04"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41.4121" x="351.67" y="113.0351">ATIVA</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70.6699" x="351.67" y="129.332">EXPIRADA</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83.5762" x="351.67" y="145.6289">CONCLUIDA</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="346.67" x2="478.1495" y1="152.9306" y2="152.9306"/></g><g class="entity" data-entity="StatusAssinatura" data-source-line="78" data-uid="ent0011" id="entity_StatusAssinatura"><rect fill="#313139" height="80.5938" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="150.8154" x="7" y="310.56"/><ellipse cx="22" cy="326.56" fill="#852D19" rx="11" ry="11" style="stroke:#E7E7E7;stroke-width:1;"/><path d="M26.1094,332.56 L18.3906,332.56 L18.3906,320.1694 L26.1094,320.1694 L26.1094,322.3256 L20.8438,322.3256 L20.8438,324.9975 L25.6094,324.9975 L25.6094,327.1538 L20.8438,327.1538 L20.8438,330.4038 L26.1094,330.4038 L26.1094,332.56 Z " fill="#FFFFFF"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118.8154" x="36" y="331.4067">StatusAssinatura</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="8" x2="156.8154" y1="342.56" y2="342.56"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41.4121" x="13" y="359.5551">ATIVA</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70.6699" x="13" y="375.852">EXPIRADA</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="8" x2="156.8154" y1="383.1538" y2="383.1538"/></g><g class="entity" data-entity="StatusPagamento" data-source-line="83" data-uid="ent0012" id="entity_StatusPagamento"><rect fill="#313139" height="96.8906" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="156.2773" x="193.27" y="302.42"/><ellipse cx="208.27" cy="318.42" fill="#852D19" rx="11" ry="11" style="stroke:#E7E7E7;stroke-width:1;"/><path d="M212.3794,324.42 L204.6606,324.42 L204.6606,312.0294 L212.3794,312.0294 L212.3794,314.1856 L207.1138,314.1856 L207.1138,316.8575 L211.8794,316.8575 L211.8794,319.0138 L207.1138,319.0138 L207.1138,322.2638 L212.3794,322.2638 L212.3794,324.42 Z " fill="#FFFFFF"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124.2773" x="222.27" y="323.2667">StatusPagamento</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="194.27" x2="348.5473" y1="334.42" y2="334.42"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75.2568" x="199.27" y="351.4151">PENDENTE</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79.7207" x="199.27" y="367.712">APROVADO</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.8594" x="199.27" y="384.0089">RECUSADO</text><line style="stroke:#E7E7E7;stroke-width:0.5;" x1="194.27" x2="348.5473" y1="391.3106" y2="391.3106"/></g><g class="link" data-entity-1="Usuario" data-entity-2="Reserva" data-source-line="89" data-uid="lnk13" id="link_Usuario_Reserva"><path codeLine="89" d="M606.19,218.2 C585.87,238.32 565.52,258.98 547.52,277.79" fill="none" id="Usuario-Reserva" style="stroke:#E7E7E7;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.271" x="590.0546" y="237.878">1</text><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="529.3072" y="266.9323">0..*</text></g><g class="link" data-entity-1="Reserva" data-entity-2="Usuario" data-source-line="94" data-uid="lnk18" id="link_Reserva_Usuario"><path codeLine="94" d="M571.91,277.79 C591.51,258.98 612.42,238.32 632.29,218.2" fill="none" id="Reserva-Usuario" style="stroke:#E7E7E7;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="6.5" x="573.9577" y="266.9323">*</text><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.271" x="617.9082" y="237.878">1</text></g><g class="link" data-entity-1="Usuario" data-entity-2="Assinatura" data-source-line="90" data-uid="lnk14" id="link_Usuario_Assinatura"><path codeLine="90" d="M723.41,218.2 C723.41,238.32 723.41,258.98 723.41,277.79" fill="none" id="Usuario-Assinatura" style="stroke:#E7E7E7;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.271" x="715.1503" y="237.878">1</text><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="699.2797" y="266.9323">0..*</text></g><g class="link" data-entity-1="Usuario" data-entity-2="Notificacao" data-source-line="91" data-uid="lnk15" id="link_Usuario_Notificacao"><path codeLine="91" d="M821.31,218.2 C842.78,241.16 864.9,264.82 884.36,285.63" fill="none" id="Usuario-Notificacao" style="stroke:#E7E7E7;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.271" x="819.628" y="237.878">1</text><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="853.984" y="275.2032">0..*</text></g><g class="link" data-entity-1="Usuario" data-entity-2="Pagamento" data-source-line="92" data-uid="lnk16" id="link_Usuario_Pagamento"><path codeLine="92" d="M846.86,173.91 C908.15,204.38 983.09,242.35 1049.41,277.97 C1055.07,281.01 1060.85,284.16 1066.67,287.36" fill="none" id="Usuario-Pagamento" style="stroke:#E7E7E7;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.271" x="854.6347" y="174.267">1</text><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="1035.9686" y="279.8826">0..*</text></g><g class="link" data-entity-1="Livro" data-entity-2="Reserva" data-source-line="93" data-uid="lnk17" id="link_Livro_Reserva"><path codeLine="93" d="M500.83,483.41 C501.06,463.36 500.77,442.8 499.96,424.07" fill="none" id="Livro-Reserva" style="stroke:#E7E7E7;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.271" x="493.5022" y="472.5134">1</text><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23.0356" x="477.0622" y="443.8358">0..*</text></g><g class="link" data-entity-1="Reserva" data-entity-2="Livro" data-source-line="95" data-uid="lnk19" id="link_Reserva_Livro"><path codeLine="95" d="M475.56,424.07 C474.79,442.8 474.51,463.36 474.73,483.41" fill="none" id="Reserva-Livro" style="stroke:#E7E7E7;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="6.5" x="468.1689" y="443.8358">*</text><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.271" x="465.5671" y="472.5134">1</text></g></g></svg></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright ©️ 2025, Jonh Carvalho
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../../../../assets/mkdocs_puml/puml.js"></script>
+      
+        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      
+        <script src="../../../../assets/mkdocs_puml/interaction.js"></script>
+      
+    
+  </body>
+</html>

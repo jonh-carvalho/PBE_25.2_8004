@@ -1,0 +1,27 @@
+@startuml biblio
+!define RECTANGLE class
+
+actor "Usuário" as Usuario
+actor "Sistema de Pagamento" as Pagamento
+
+rectangle "Biblioteca Digital" {
+  usecase "Login" as UC1
+  usecase "Buscar Livro" as UC2
+  usecase "Reservar Livro" as UC3
+  usecase "Baixar Livro" as UC4
+  usecase "Assinar Premium" as UC5
+}
+
+Usuario --> UC1 : Autentica-se
+Usuario --> UC2 : Busca livros
+Usuario --> UC3 : Solicita reserva
+Usuario --> UC4 : Baixa livro reservado
+Usuario --> UC5 : Solicita assinatura
+
+UC3 --> Pagamento : Verifica status de assinatura
+UC5 --> Pagamento : Realiza pagamento
+
+UC3 .> UC2 : <<include>>
+UC4 .> UC3 : <<include>>
+
+@enduml

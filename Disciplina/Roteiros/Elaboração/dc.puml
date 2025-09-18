@@ -1,0 +1,25 @@
+@starmindmap
+class Usuario {
+  
+}
+
+class Livro {
+  
+}
+
+class Biblioteca {
+  
+}
+
+class Assinatura {
+  
+}
+
+Usuario --  Assinatura 
+Usuario  --  Livro 
+Biblioteca  --  Livro
+Biblioteca  --  Usuario 
+
+Livro  --  Usuario 
+
+@enduml
