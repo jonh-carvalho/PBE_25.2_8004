@@ -14,23 +14,36 @@ nav:
       - CodeSpace: Disciplina/codespace.md
       - Avaliações: Disciplina/avalia.md
       - Issues e Projects: Disciplina/issues_projects.md
+      - Dojo: 
+          - Index: Disciplina/dojo/dojo.md
+          - Setup: Disciplina/dojo/setup.md
+          - TDD/Pair: Disciplina/dojo/tddpairprogramming.md
+      - Roteiros: 
+          - Iniciação:
+              - Design Thinking: Disciplina/Roteiros/Iniciação/04_DesignThinking.md
+              - UP: Disciplina/Roteiros/Iniciação/04_UPgithub.md
+          - Elaboração:
+              - Requisitos: Elaboracao/req_biblioteca.md
+              - Casos de Uso: Elaboracao/uc_biblioteca.md
+              - Diagrama de Classes: Elaboracao/class_biblioteca.md      
   - Iniciação: 
       - Index: Iniciacao/index.md
       - Pesquisa: Iniciacao/pesquisa.md
+      - Cenário: Iniciacao/cenario.md
       - 5w2h: Iniciacao/5w2h.md
-      - Design Thinking: Iniciacao/design_thinking.md
       - Brainstorming: Iniciacao/brainstorm.md
       - Mapa Mental: Iniciacao/mapa_mental.md
+      - Design Thinking: Iniciacao/design_thinking.md
       - Prototipagem Baixa Fidelidade: Iniciacao/prototipobaixa_fidelidade.md
-      - Prototipagem Alta Fidelidade: Iniciacao/prototipo_alta_fidelidade.md
+    
   - Elaboração:
       - Index: Elaboracao/index.md
-      - Requisitos: Elaboracao/das.md
-      - Casos de Uso: Elaboracao/casos_de_uso.md
+      - Requisitos: Elaboracao/espreq.md
+      - Casos de Uso: Elaboracao/diagrama_casos_de_uso.md
       - Diagrama de Classes: Elaboracao/diagrama_de_classes.md
       - Diagrama de Sequência: Elaboracao/diagrama_de_sequencia.md
       - Protótipo de Baixa Fidelidade: Elaboracao/prototipo_baixa_fidelidade.md
-      - Protótipo de Alta Fidelidade: Elaboracao/prototipo_alta_fidelidade.md
+      
   - Construção:
       - Index: Construcao/index.md
       - Git Issues: Construcao/git_issues.md
