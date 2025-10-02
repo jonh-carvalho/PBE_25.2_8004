@@ -10,6 +10,7 @@
 | __06__ - 11/09/25     | :material-check: Teste de Progresso |
 | __07__ - 18/09/25     | :material-check: [Análise OO e UML](../assets/Aulas/AnaliseOO&UML.pdf) <br> :material-check: Diagrama de Casos de Uso <br> :material-check: [Classes](../assets/Aulas/Classes_Pacotes.pdf) |
 | __08__ - 25/09/25     | :material-check: AP1    |
+| __09__ - 02/10/25     | Roteiros POO e Django  |
 
 <!--
 
@@ -36,28 +37,3 @@
 | __21__ - 18/10/24     | :material-check: Introdução SQL - Sqlite OO  |
 | __22__ - 19/10/24     | :material-check: [Funcionalidade](../assets/Aulas/Iquirium.pdf)        
 -->
-
-```plantuml
-@startuml teste
-class Usuario {
-}
-
-class Livro {
-}
-
-class Biblioteca {
-}
-
-class Assinatura {
-
-}
-
-Usuario --  Assinatura 
-Usuario  --  Livro 
-Biblioteca  --  Livro
-Biblioteca  --  Usuario 
-
-Livro  --  Usuario 
-
-@enduml
-```
