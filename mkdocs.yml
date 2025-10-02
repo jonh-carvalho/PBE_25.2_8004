@@ -27,9 +27,8 @@ nav:
               - Casos de Uso: Disciplina/Roteiros/Elaboração/uc_biblioteca.md
               - Diagrama de Classes: Disciplina/Roteiros/Elaboração/class_biblioteca.md  
           - Construção:
-              - IntroGitHub Projects: Disciplina/Roteiros/Construção/github_projects.md
-              - Git Issues: Disciplina/Roteiros/Construção/git_issues.md
-              - CodeSpace: Disciplina/Roteiros/Construção/codes    
+              - Django: 
+                  - Intro: Disciplina\Roteiros\Construção\Django\01_Intro.md    
   - Iniciação: 
       - Index: Iniciacao/index.md
       - Pesquisa: Iniciacao/pesquisa.md
