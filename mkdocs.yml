@@ -26,7 +26,18 @@ nav:
               - Requisitos: Disciplina/Roteiros/Elaboração/req_biblioteca.md
               - Casos de Uso: Disciplina/Roteiros/Elaboração/uc_biblioteca.md
               - Diagrama de Classes: Disciplina/Roteiros/Elaboração/class_biblioteca.md      
-  - Iniciação: 
+          - Construção:
+              - Poo: 
+                  - Intro OO: Disciplina\Roteiros\Construção\Poo\Conceitos-basicos-de-OO.pdf
+                  - Procedural x OO: Disciplina\Roteiros\Construção\Poo\proceduralXpoo.ipynb
+                  - Intro Python OO: Disciplina\Roteiros\Construção\Poo\poo.ipynb
+                  - Python OO: Disciplina\Roteiros\Construção\Poo\Python-OO.pdf
+
+
+              - Django:
+                  - Intro: Disciplina\Roteiros\Construção\Django\01_Intro.md
+                  - Intro Rest: Disciplina\Roteiros\Construção\Django\02_Intro Django Rest.md
+  - Iniciação:     
       - Index: Iniciacao/index.md
       - Pesquisa: Iniciacao/pesquisa.md
       - Cenário: Iniciacao/cenario.md
@@ -34,7 +45,6 @@ nav:
       - Brainstorming: Iniciacao/brainstorm.md
       - Mapa Mental: Iniciacao/mapa_mental.md
       - Design Thinking: Iniciacao/design_thinking.md
-      - Prototipagem Baixa Fidelidade: Iniciacao/prototipo_baixa_fidelidade.md
     
   - Elaboração:
       - Index: Elaboracao/index.md
@@ -112,6 +122,7 @@ plugins:
   - plantuml:
       puml_url: https://www.plantuml.com/plantuml/
       puml_keyword: plantuml
+  - mkdocs-jupyter
   
   - search
 
