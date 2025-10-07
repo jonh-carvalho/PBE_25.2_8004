@@ -11,6 +11,15 @@
 | __07__ - 18/09/25     | :material-check: [Análise OO e UML](../assets/Aulas/AnaliseOO&UML.pdf) <br> :material-check: Diagrama de Casos de Uso <br> :material-check: [Classes](../assets/Aulas/Classes_Pacotes.pdf) |
 | __08__ - 25/09/25     | :material-check: AP1    |
 | __09__ - 02/10/25     | Roteiros POO e Django  |
+| __10__ - 09/10/25     | :material-check: Roteiro Django Rest- Introdução SQL - Sqlite |
+| __11__ - 16/10/25     | :material-check: Roteiro Streaming |
+| __12__ - 23/10/25     | :material-check: Roteiro Streaming |
+| __13__ - 30/10/25     | :material-check: Roteiro Streaming |
+| __14__ - 07/11/25     | :material-check: Roteiro Streaming |
+| __15__ - 13/11/25     | :material-check: AP2 |
+| __16__ - 20/11/25     | :material-check: |
+| __17__ - 27/11/25     | :material-check: AS |
+
 
 <!--
 
