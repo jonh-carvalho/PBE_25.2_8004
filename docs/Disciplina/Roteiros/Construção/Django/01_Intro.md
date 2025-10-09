@@ -105,42 +105,7 @@ ou
    ]
    ```
 
-## Passo 6: Configurar URLs e Views Básicas
-
-1. Crie um arquivo `urls.py` na pasta `myapp`:
-
-   ```python
-   from django.urls import path
-   from . import views
-
-   urlpatterns = [
-       path('', views.home, name='home'),
-   ]
-   ```
-
-2. Inclua as URLs da aplicação no projeto principal (`myproject/urls.py`):
-
-   ```python
-   from django.contrib import admin
-   from django.urls import path, include
-
-   urlpatterns = [
-       path('admin/', admin.site.urls),
-       path('', include('myapp.urls')),
-   ]
-   ```
-
-3. Crie uma view básica em `myapp/views.py`:
-
-   ```python
-   from django.shortcuts import render
-   from django.http import HttpResponse
-
-   def home(request):
-       return HttpResponse("Bem-vindo ao meu site!")
-   ```
-
-## Passo 7: Criar Modelos e Migrações
+## Passo 6: Criar Modelos e Migrações
 
 1. Defina um modelo em `myapp/models.py`:
 
@@ -164,7 +129,7 @@ ou
    python manage.py migrate
    ```
 
-## Passo 8: Configurar o Painel de Administração
+## Passo 7: Configurar o Painel de Administração
 
 1. Crie um superusuário:
 
@@ -181,7 +146,7 @@ ou
    admin.site.register(Produto)
    ```
 
-## Passo 9: Executar o Servidor de Desenvolvimento
+## Passo 8: Executar o Servidor de Desenvolvimento
 
 1. Inicie o servidor:
 

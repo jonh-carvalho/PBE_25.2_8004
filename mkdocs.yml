@@ -8,16 +8,6 @@ nav:
   - Home: index.md
   - Disciplina:
       - Aulas: Disciplina/aulas.md
-      - Ambiente: Disciplina/ambiente.md
-      - Github: Disciplina/github.md
-      - Mkdocs: Disciplina/mkdocs.md
-      - CodeSpace: Disciplina/codespace.md
-      - Avaliações: Disciplina/avalia.md
-      - Issues e Projects: Disciplina/issues_projects.md
-      - Dojo: 
-          - Index: Disciplina/dojo/dojo.md
-          - Setup: Disciplina/dojo/setup.md
-          - TDD/Pair: Disciplina/dojo/tddpairprogramming.md
       - Roteiros: 
           - Iniciação:
               - Design Thinking: Disciplina/Roteiros/Iniciação/04_DesignThinking.md
@@ -32,9 +22,24 @@ nav:
                   - Procedural x OO: Disciplina\Roteiros\Construção\Poo\proceduralXpoo.ipynb
                   - Intro Python OO: Disciplina\Roteiros\Construção\Poo\poo.ipynb
                   - Python OO: Disciplina\Roteiros\Construção\Poo\Python-OO.pdf
+              - BD: 
+                  - SQLite: Disciplina\Roteiros\Construção\BD\sqlite.md
+                  - PySqlite: Disciplina\Roteiros\Construção\BD\pysqlite.ipynb
+                  
               - Django:
                   - Intro: Disciplina\Roteiros\Construção\Django\01_Intro.md
-                  - Intro Rest: Disciplina\Roteiros\Construção\Django\02_Intro Django Rest.md       
+                  - Intro Rest: Disciplina\Roteiros\Construção\Django\02_Intro Django Rest.md  
+      - Ambiente: Disciplina/ambiente.md
+      - Github: Disciplina/github.md
+      - Mkdocs: Disciplina/mkdocs.md
+      - CodeSpace: Disciplina/codespace.md
+      - Avaliações: Disciplina/avalia.md
+      - Issues e Projects: Disciplina/issues_projects.md
+      - Dojo: 
+          - Index: Disciplina/dojo/dojo.md
+          - Setup: Disciplina/dojo/setup.md
+          - TDD/Pair: Disciplina/dojo/tddpairprogramming.md
+           
   - Iniciação: 
       - Index: Iniciacao/index.md
       - Pesquisa: Iniciacao/pesquisa.md
@@ -64,57 +69,6 @@ nav:
 
 extra_css:
   - css/extra.css
-
-markdown_extensions:
-  # Tooltips
-  - abbr
-  # Admonitions
-  - admonition
-  # Annotations, Buttons, Grids, Icons & Emojis, Images, Tooltips
-  - attr_list
-  # Footnotes
-  - footnotes
-  # Annotations, Grids, Images
-  - md_in_html
-  # Images
-  - pymdownx.blocks.caption
-  # Formatting
-  - pymdownx.caret
-  # Formatting
-  - pymdownx.critic
-  # Admonitions
-  - pymdownx.details
-  # Icons & Emojis
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji ''
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg ''
-  # Code Blocks
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  # Code Blocks
-  - pymdownx.inlinehilite
-  # Formatting
-  - pymdownx.keys
-  # Formatting
-  - pymdownx.mark
-  # Code Blocks, Tooltips
-  - pymdownx.snippets
-  # Admonitions, Annotations, Code Blocks, Content Tabs
-  - pymdownx.superfences
-  # Content Tabs
-  - pymdownx.tabbed:
-      alternate_style: true
-  # Lists
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  # Formatting
-  - pymdownx.tilde
-  # Data Tables
-
-  - toc:
-      permalink: true
 
 plugins:
   - plantuml:
@@ -174,3 +128,54 @@ theme:
     repo: fontawesome/brands/github
     logo: simple/react
     favicon: simple/react
+
+markdown_extensions:
+  # Tooltips
+  - abbr
+  # Admonitions
+  - admonition
+  # Annotations, Buttons, Grids, Icons & Emojis, Images, Tooltips
+  - attr_list
+  # Footnotes
+  - footnotes
+  # Annotations, Grids, Images
+  - md_in_html
+  # Images
+  - pymdownx.blocks.caption
+  # Formatting
+  - pymdownx.caret
+  # Formatting
+  - pymdownx.critic
+  # Admonitions
+  - pymdownx.details
+  # Icons & Emojis
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji ''
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg ''
+  # Code Blocks
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  # Code Blocks
+  - pymdownx.inlinehilite
+  # Formatting
+  - pymdownx.keys
+  # Formatting
+  - pymdownx.mark
+  # Code Blocks, Tooltips
+  - pymdownx.snippets
+  # Admonitions, Annotations, Code Blocks, Content Tabs
+  - pymdownx.superfences
+  # Content Tabs
+  - pymdownx.tabbed:
+      alternate_style: true
+  # Lists
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  # Formatting
+  - pymdownx.tilde
+  # Data Tables
+
+  - toc:
+      permalink: true
