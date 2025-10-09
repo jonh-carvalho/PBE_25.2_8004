@@ -26,6 +26,12 @@ hide:
     [:octicons-arrow-right-24: Repositório](https://github.com/Projetos-de-Extensao/PBE_25.2_8004_II)
 
 
+-   :material-github:{ .lg .right } __PBE_25.2_8004_II__
+
+    ---
+    <a href="https://iskills.ibmec.edu.br" target="_blank"><img src="assets/iskills.png" alt="ibmec iskills" style="max-width:220px; width:100%; height:auto; border-radius:6px;" /></a>
+
+
 -   :material-github:{ .lg .left } __PBE_25.2_8004_III__
 
     ---
