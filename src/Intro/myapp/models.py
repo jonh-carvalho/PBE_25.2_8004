@@ -15,7 +15,7 @@ class Produto(models.Model):
 
 # Create your models here.
 class Categoria(models.Model):
-    """Representa a categoria de um produto (1 Categoria -> N Produtos)."""
+    #Representa a categoria de um produto (1 Categoria -> N Produtos).
     nome = models.CharField(max_length=100, unique=True)
 
     class Meta:
@@ -27,7 +27,7 @@ class Categoria(models.Model):
 
 
 class Tag(models.Model):
-    """Marcador livre para agrupar produtos (N Produtos <-> N Tags)."""
+    ### Marcador livre para agrupar produtos (N Produtos <-> N Tags).
     nome = models.CharField(max_length=50, unique=True)
 
     class Meta:
@@ -59,7 +59,7 @@ class Produto(models.Model):
 
 
 class ProdutoDetalhe(models.Model):
-    """Detalhes adicionais de um produto (1 Produto -> 1 ProdutoDetalhe)."""
+    #Detalhes adicionais de um produto (1 Produto -> 1 ProdutoDetalhe).
     produto = models.OneToOneField(
         Produto,
         on_delete=models.CASCADE,
