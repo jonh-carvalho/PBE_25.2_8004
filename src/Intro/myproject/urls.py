@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+     # URLs da aplicação principal
     path('admin/', admin.site.urls),
     path('api/', include('myapp.api_urls')),  # URLs da API
 ]

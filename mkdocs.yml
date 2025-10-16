@@ -28,7 +28,9 @@ nav:
                   
               - Django:
                   - Intro: Disciplina\Roteiros\Construção\Django\01_Intro.md
-                  - Intro Rest: Disciplina\Roteiros\Construção\Django\02_Intro Django Rest.md  
+                  - Intro Rest: Disciplina\Roteiros\Construção\Django\02_Intro Django Rest.md
+                  - Streaming:
+                    -  
       - Ambiente: Disciplina/ambiente.md
       - Github: Disciplina/github.md
       - Mkdocs: Disciplina/mkdocs.md
