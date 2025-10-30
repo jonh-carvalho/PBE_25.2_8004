@@ -62,6 +62,7 @@ Abaixo, vamos ver como configurar a **Autenticação via Token** no Django e com
 Crie uma URL para o endpoint de obtenção de tokens de autenticação. No seu `urls.py`, adicione:
 
 ```python
+# streaming_platform/urls.py
 from django.urls import path
 from rest_framework.authtoken.views import obtain_auth_token
 
@@ -75,7 +76,7 @@ Com isso, os usuários poderão obter tokens enviando uma requisição `POST` co
 
 ### Passo 3: Obter o Token de Autenticação
 
-Para obter o token, você pode usar o `curl`, Postman, ou qualquer cliente HTTP. No Postman, por exemplo:
+Para obter o token, você pode usar o `curl`, o EchoAPI(vscode),Postman, ou qualquer cliente HTTP. No EchoApi(Postman), por exemplo:
 
 - Envie uma requisição `POST` para `http://localhost:8000/api/token/`.
 - No corpo da requisição (`body`), envie as credenciais como `x-www-form-urlencoded`:
