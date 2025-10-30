@@ -15,22 +15,34 @@ nav:
           - Elaboração:
               - Requisitos: Disciplina/Roteiros/Elaboração/req_biblioteca.md
               - Casos de Uso: Disciplina/Roteiros/Elaboração/uc_biblioteca.md
-              - Diagrama de Classes: Disciplina/Roteiros/Elaboração/class_biblioteca.md   
+              - Diagrama de Classes: Disciplina/Roteiros/Elaboração/class_biblioteca.md 
           - Construção:
               - Poo: 
                   - Intro OO: Disciplina\Roteiros\Construção\Poo\Conceitos-basicos-de-OO.pdf
                   - Procedural x OO: Disciplina\Roteiros\Construção\Poo\proceduralXpoo.ipynb
                   - Intro Python OO: Disciplina\Roteiros\Construção\Poo\poo.ipynb
                   - Python OO: Disciplina\Roteiros\Construção\Poo\Python-OO.pdf
-              - BD: 
-                  - SQLite: Disciplina\Roteiros\Construção\BD\sqlite.md
-                  - PySqlite: Disciplina\Roteiros\Construção\BD\pysqlite.ipynb
-                  
               - Django:
                   - Intro: Disciplina\Roteiros\Construção\Django\01_Intro.md
                   - Intro Rest: Disciplina\Roteiros\Construção\Django\02_Intro Django Rest.md
-                  - Streaming:
-                    -  
+                  - Streaming: 
+                      - 0. Projeto Streaming: Disciplina\Roteiros\Construção\Django\Streaming\00_Projeto_Streaming.md
+                      - 1. Regras de Negócio: Disciplina\Roteiros\Construção\Django\Streaming\01_Regras_Negócio_Streaming.md
+                      - 2. Modelagem: Disciplina\Roteiros\Construção\Django\Streaming\02_Modelagem_Streaming.md
+                      - 3. Rest Api: Disciplina\Roteiros\Construção\Django\Streaming\03_Rest_Streaming.md
+                      - 4. Consume: Disciplina\Roteiros\Construção\Django\Streaming\04_Consume_Streaming.md
+                      - 5. Playlists NxN: Disciplina\Roteiros\Construção\Django\Streaming\05_Playlist NxN.md
+                      - 6. Shell: Disciplina\Roteiros\Construção\Django\Streaming\06_Shell_Streaming.md
+                      - 7. Swagger: Disciplina\Roteiros\Construção\Django\Streaming\06_Swagger.md
+                      - 8. Carga de Dados: Disciplina\Roteiros\Construção\Django\Streaming\07_Carga de Dados.md
+                      - 9. CorsOrigin: Disciplina\Roteiros\Construção\Django\Streaming\08_CorsOrigin.md
+                      - 10. Consume Web: Disciplina\Roteiros\Construção\Django\Streaming\09_Consume_Streaming_Web.md
+                      - 11. Admin: Disciplina\Roteiros\Construção\Django\Streaming\10_Admin_Streaming.md
+                      - 12. Associações: Disciplina\Roteiros\Construção\Django\Streaming\11_Associações.md
+                      - 13. Autenticação: Disciplina\Roteiros\Construção\Django\Streaming\12_Autenticação.md
+                      - 14. Filtros: Disciplina\Roteiros\Construção\Django\Streaming\13_Filtros.md
+                      - 15. Regras de Negócio: Disciplina\Roteiros\Construção\Django\Streaming\14_Regras de Negócio.md
+                      - 16. Deploy: Disciplina\Roteiros\Construção\Django\Streaming\15_Deploy.md
       - Ambiente: Disciplina/ambiente.md
       - Github: Disciplina/github.md
       - Mkdocs: Disciplina/mkdocs.md
