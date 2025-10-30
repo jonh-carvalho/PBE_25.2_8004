@@ -2610,17 +2610,18 @@
 </span></code></pre></div>
 <h3 id="passo-2-gerar-tokens-de-autenticacao">Passo 2: Gerar Tokens de Autenticação<a class="headerlink" href="#passo-2-gerar-tokens-de-autenticacao" title="Permanent link">&para;</a></h3>
 <p>Crie uma URL para o endpoint de obtenção de tokens de autenticação. No seu <code>urls.py</code>, adicione:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">django.urls</span><span class="w"> </span><span class="kn">import</span> <span class="n">path</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">rest_framework.authtoken.views</span><span class="w"> </span><span class="kn">import</span> <span class="n">obtain_auth_token</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="c1"># Outras rotas</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;api/token/&#39;</span><span class="p">,</span> <span class="n">obtain_auth_token</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;api_token_auth&#39;</span><span class="p">),</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">]</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># streaming_platform/urls.py</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">django.urls</span><span class="w"> </span><span class="kn">import</span> <span class="n">path</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">rest_framework.authtoken.views</span><span class="w"> </span><span class="kn">import</span> <span class="n">obtain_auth_token</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="c1"># Outras rotas</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;api/token/&#39;</span><span class="p">,</span> <span class="n">obtain_auth_token</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;api_token_auth&#39;</span><span class="p">),</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">]</span>
 </span></code></pre></div>
 <p>Com isso, os usuários poderão obter tokens enviando uma requisição <code>POST</code> com suas credenciais (usuário e senha) para <code>api/token/</code>.</p>
 <h3 id="passo-3-obter-o-token-de-autenticacao">Passo 3: Obter o Token de Autenticação<a class="headerlink" href="#passo-3-obter-o-token-de-autenticacao" title="Permanent link">&para;</a></h3>
-<p>Para obter o token, você pode usar o <code>curl</code>, Postman, ou qualquer cliente HTTP. No Postman, por exemplo:</p>
+<p>Para obter o token, você pode usar o <code>curl</code>, o EchoAPI(vscode),Postman, ou qualquer cliente HTTP. No EchoApi(Postman), por exemplo:</p>
 <ul>
 <li>Envie uma requisição <code>POST</code> para <code>http://localhost:8000/api/token/</code>.</li>
 <li>No corpo da requisição (<code>body</code>), envie as credenciais como <code>x-www-form-urlencoded</code>:</li>
